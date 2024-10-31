@@ -9,11 +9,33 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    adminlogin.cpp \
+    adminmanageitems.cpp \
+    adminmanagerentals.cpp \
+    adminmanageusers.cpp \
+    browseitems.cpp \
+    loginwindow.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    registerwindow.cpp \
+    reserveitems.cpp \
+    userlogin.cpp \
+    viewrentalhistory.cpp \
+    viewreservations.cpp
 
 HEADERS += \
-    mainwindow.h
+    adminlogin.h \
+    adminmanageitems.h \
+    adminmanagerentals.h \
+    adminmanageusers.h \
+    browseitems.h \
+    loginwindow.h \
+    mainwindow.h \
+    registerwindow.h \
+    reserveitems.h \
+    userlogin.h \
+    viewrentalhistory.h \
+    viewreservations.h
 
 FORMS += \
     mainwindow.ui
