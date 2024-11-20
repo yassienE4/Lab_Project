@@ -27,6 +27,7 @@ void loginwindow::on_pushButton_Login_clicked()
         {
             //open admin
             // hi seif
+            //hi yaseen
         }
     }
 }
