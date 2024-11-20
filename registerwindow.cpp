@@ -1,5 +1,6 @@
 #include "registerwindow.h"
 #include "ui_registerwindow.h"
+#include "mainwindow.h"
 
 registerwindow::registerwindow(QWidget *parent)
     : QDialog(parent)
@@ -12,3 +13,37 @@ registerwindow::~registerwindow()
 {
     delete ui;
 }
+
+void registerwindow::on_pushButton_Register_clicked()
+{
+    if(ui->lineEdit_AdminKey->text() == "")
+    {
+        // register user
+    }
+    else
+    {
+        if(ui->lineEdit_AdminKey->text() == "123");
+        {
+            // register admin
+        }
+    }
+}
+
+
+void registerwindow::on_pushButton_Clear_clicked()
+{
+    ui->lineEdit_AdminKey->setText("");
+    ui->lineEdit_Email->setText("");
+    ui->lineEdit_Password->setText("");
+    ui->lineEdit_RepeatPassword->setText("");
+    ui->lineEdit_username->setText("");
+}
+
+
+void registerwindow::on_pushButton_Back_clicked()
+{
+    this->hide();
+    MainWindow *m = new MainWindow();
+    m->show();
+}
+
