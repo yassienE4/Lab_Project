@@ -2,7 +2,7 @@
 #define ALLACCOUNTS_H
 #include <QString>
 using namespace std;
-class allusers
+class allaccounts
 {
 private:
     struct info
@@ -13,7 +13,7 @@ private:
         string contactinfo;
     };
 public:
-    allusers();
+    allaccounts();
     virtual void login() = 0;
 };
 

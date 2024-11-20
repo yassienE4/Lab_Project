@@ -2,3 +2,7 @@
 
 admin::admin() {}
 
+void admin::login()
+{
+
+}
