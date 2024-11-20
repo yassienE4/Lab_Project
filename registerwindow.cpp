@@ -19,12 +19,14 @@ void registerwindow::on_pushButton_Register_clicked()
     if(ui->lineEdit_AdminKey->text() == "")
     {
         // register user
+        // put info inside vector user
     }
     else
     {
         if(ui->lineEdit_AdminKey->text() == "123");
         {
             // register admin
+            // put info inside vector admin
         }
     }
 }

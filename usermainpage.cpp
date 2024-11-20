@@ -1,5 +1,5 @@
-#include "userlogin.h"
-#include "ui_userlogin.h"
+#include "usermainpage.h"
+#include "ui_usermainpage.h"
 
 userlogin::userlogin(QWidget *parent)
     : QDialog(parent)

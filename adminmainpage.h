@@ -1,5 +1,5 @@
-#ifndef ADMINLOGIN_H
-#define ADMINLOGIN_H
+#ifndef ADMINMAINPAGE_H
+#define ADMINMAINPAGE_H
 
 #include <QDialog>
 
@@ -19,4 +19,4 @@ private:
     Ui::adminlogin *ui;
 };
 
-#endif // ADMINLOGIN_H
+#endif // ADMINMAINPAGE_H

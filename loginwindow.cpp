@@ -19,15 +19,15 @@ void loginwindow::on_pushButton_Login_clicked()
 {
     if(ui->lineEdit_adminkey->text() == "") // check if admin is blank
     {
-        //open user
+        // check if username and passwords exist in vector(normalusers)
+        //call normaluser function esmo openusermainpage = show the usermainpage
     }
     else
     {
         if(ui->lineEdit_adminkey->text() == "123")// admin key
         {
-            //open admin
-            // hi seif
-            //hi yaseen
+            // check if username and passwords exist in vector(adminuser)
+            //call adminuser function esmo openadminusermainpage = show the adminusermainpage
         }
     }
 }

@@ -15,6 +15,9 @@ public:
     explicit adminmanageusers(QWidget *parent = nullptr);
     ~adminmanageusers();
 
+private slots:
+    void on_pushButton_ManageUsers_clicked();
+
 private:
     Ui::adminmanageusers *ui;
 };

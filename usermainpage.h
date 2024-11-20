@@ -1,5 +1,5 @@
-#ifndef USERLOGIN_H
-#define USERLOGIN_H
+#ifndef USERMAINPAGE_H
+#define USERMAINPAGE_H
 
 #include <QDialog>
 
@@ -19,4 +19,4 @@ private:
     Ui::userlogin *ui;
 };
 
-#endif // USERLOGIN_H
+#endif // USERMAINPAGE_H

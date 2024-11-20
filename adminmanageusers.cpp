@@ -12,3 +12,9 @@ adminmanageusers::~adminmanageusers()
 {
     delete ui;
 }
+
+void adminmanageusers::on_pushButton_ManageUsers_clicked()
+{
+
+}
+
