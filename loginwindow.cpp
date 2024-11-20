@@ -26,6 +26,7 @@ void loginwindow::on_pushButton_Login_clicked()
         if(ui->lineEdit_adminkey->text() == "123")// admin key
         {
             //open admin
+            // hi seif
         }
     }
 }
