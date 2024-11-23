@@ -15,6 +15,7 @@ SOURCES += \
     adminmanagerentals.cpp \
     adminmanageusers.cpp \
     allaccounts.cpp \
+    centerflow.cpp \
     loginwindow.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -33,6 +34,7 @@ HEADERS += \
     adminmanagerentals.h \
     adminmanageusers.h \
     allaccounts.h \
+    centerflow.h \
     loginwindow.h \
     mainwindow.h \
     registerwindow.h \
@@ -61,3 +63,5 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+RESOURCES += \
+    resources.qrc

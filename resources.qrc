@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/files">
+        <file>accountfile.txt</file>
+        <file>iteminventoryfile.txt</file>
+        <file>rentalreccords.txt</file>
+    </qresource>
+</RCC>
