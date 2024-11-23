@@ -12,8 +12,6 @@ centerflow::centerflow()
 {
     MainWindow w;
     w.show();
-    Qlist<users> *normalUsers;
-    int size;
     fstream myfile;
     myfile.open(":/files/accountfile.txt",ios::in);
     if(myfile.is_open())
@@ -24,16 +22,18 @@ centerflow::centerflow()
         for(int i = 0; i < size; i++)
         {
             users t;
-            getline(myfile,t.name);
-            getline(myfile,t.password);
-            normalUsers.push_back(t);
+            string n;
+            getline(myfile,n);
+            t.setname(n);
+            getline(myfile,n);
+            t.setpassword(n);
+            normalUsers->push_back(t);
         }
         myfile.close();
     }
 
-    Qlist<admin> *adminUser;
-    int adminsize;
-    fstream myfile;
+
+    //fstream myfile;
     myfile.open(":/files/admin.txt",ios::in);
     if(myfile.is_open())
     {
@@ -43,15 +43,18 @@ centerflow::centerflow()
         for(int i = 0; i < adminsize; i++)
         {
             admin t;
-            getline(myfile,t.name);
-            getline(myfile,t.password);
-            adminUser.push_back(t);
+            string n;
+
+            getline(myfile,n);
+            t.setname(n);
+            getline(myfile,n);
+            t.setpassword(n);
+            adminUser->push_back(t);
         }
         myfile.close();
     }
-    Qlist<pair<int,item> *items;
-    int itemsize;
-    fstream myfile;
+
+    //fstream myfile;
     myfile.open(":/files/iteminventoryfile.txt",ios::in);
     if(myfile.is_open())
     {
@@ -62,11 +65,16 @@ centerflow::centerflow()
         {
             item t;
             string temp;
-            getline(myfile,t.name);
-            getline(myfile,t.price);
-            getline(myfile,t.demand);
+            string a;
+            getline(myfile,a);
+            t.setname(a);
+            getline(myfile,a);
+            t.setprice(stod(a));
+            getline(myfile,a);
+            t.setdemand(stoi(a));
             getline(myfile,temp);
-            items.push_back(stoi(temp),t);
+            pair<int, item> p = {stoi(temp), t};
+            items->push_back(p);
         }
         myfile.close();
     }
@@ -75,14 +83,15 @@ centerflow::centerflow()
 
 centerflow::~centerflow()
 {
+    fstream myfile;
     myfile.open(":/files/accountfile.txt",ios::out);
 
     if(myfile.is_open())
     {
-        myfile<<size + "\n";
+        myfile<<to_string(size) + "\n";
         for (int i = 0; i < size; i++)
         {
-            myfile<< normalUsers[i].name + "\n";
+            myfile<< normalUsers[i].getname() + "\n";
             myfile<< normalUsers[i].passwords + "\n";
         }
         myfile.close();
@@ -92,7 +101,7 @@ centerflow::~centerflow()
 
     if(myfile.is_open())
     {
-        myfile<<adminsize + "\n";
+        myfile<<to_string(adminsize) + "\n";
         for (int i = 0; i < adminsize; i++)
         {
             myfile<< adminUser[i].name + "\n";
@@ -104,7 +113,7 @@ centerflow::~centerflow()
 
     if(myfile.is_open())
     {
-        myfile<<itemsize + "\n";
+        myfile<<to_string(itemsize) + "\n";
         for (int i = 0; i < itemsize; i++)
         {
             myfile<< items[i].second.name + "\n";

@@ -29,3 +29,13 @@ string allaccounts::getpassword()
 {
     return password;
 }
+
+void allaccounts::setname(string x)
+{
+    name = x;
+}
+
+void allaccounts::setpassword(string x)
+{
+    password = x;
+}

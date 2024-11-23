@@ -18,6 +18,9 @@ public:
     void updaterental();
     void updateavailability();
     void removeitem(item x);
+    void setname(string x);
+    void setprice(double x);
+    void setdemand(int x);
 };
 
 #endif // ITEM_H
