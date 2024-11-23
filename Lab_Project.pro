@@ -16,6 +16,7 @@ SOURCES += \
     adminmanageusers.cpp \
     allaccounts.cpp \
     centerflow.cpp \
+    item.cpp \
     loginwindow.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -35,6 +36,7 @@ HEADERS += \
     adminmanageusers.h \
     allaccounts.h \
     centerflow.h \
+    item.h \
     loginwindow.h \
     mainwindow.h \
     registerwindow.h \
