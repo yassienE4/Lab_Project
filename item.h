@@ -24,6 +24,9 @@ public:
     void printItem();
     void removeItem(item x);
     bool operator==(const item& other);
+    void setname(string x);
+    void setprice(double x);
+    void setdemand(int x);
 };
 
 #endif // ITEM_H
