@@ -6,19 +6,15 @@ using namespace std;
 class allaccounts
 {
 private:
-    struct account
-    {
         string email;
         string name;
         string username;
         string contactinfo;
         string password;
-        bool admin;
-    };
+        //bool admin;
 public:
     allaccounts();
     allaccounts(string x, string y, string z, string w, string v);
-    QList<account> allaccount;
     virtual void login() = 0;
 };
 

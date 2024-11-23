@@ -3,5 +3,6 @@
         <file>accountfile.txt</file>
         <file>iteminventoryfile.txt</file>
         <file>rentalreccords.txt</file>
+        <file>admins.txt</file>
     </qresource>
 </RCC>

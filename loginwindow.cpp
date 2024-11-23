@@ -33,8 +33,8 @@ void loginwindow::on_pushButton_Login_clicked()
 
                 this->hide()
 
-                    usermainpage *UMP= new usermainpage();
-                    UMP->show();
+                usermainpage *UMP= new usermainpage();
+                UMP->show();
                 return;
             }
             ++it;
