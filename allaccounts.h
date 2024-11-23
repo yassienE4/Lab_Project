@@ -15,6 +15,10 @@ private:
 public:
     allaccounts();
     allaccounts(string x, string y, string z, string w, string v);
+    string getemail();
+    string getname();
+    string getusername();
+    string getpassword();
     virtual void login() = 0;
 };
 
