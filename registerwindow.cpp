@@ -1,6 +1,7 @@
 #include "registerwindow.h"
 #include "ui_registerwindow.h"
 #include "mainwindow.h"
+#include <QMessageBox>
 
 registerwindow::registerwindow(QWidget *parent)
     : QDialog(parent)
@@ -16,10 +17,33 @@ registerwindow::~registerwindow()
 
 void registerwindow::on_pushButton_Register_clicked()
 {
-    if(ui->lineEdit_AdminKey->text() == "")
+    QString username = ui->lineEdit_username->text();
+    QString email = ui->lineEdit_Email->text();
+    QString password = ui->lineEdit_Password->text();
+    QString repeatPassword = ui->lineEdit_RepeatPassword->text();
+
+    if (password != repeatPassword)
     {
-        // register user
-        // put info inside vector user
+        ui->label_error->setVisible(true); // Show the error message
+        return;
+    }
+    if(ui->lineEdit_AdminKey->text() == "") //if admin key is empty then it is user registering
+    {
+        users newUser; //new object type user
+        newUser.username = username;
+        newUser.email = email;        //sets info in line edits to their feilds
+        newUser.password = password;
+
+        normalUsers.push_back(newUser);// Add the new user to the normalUsers vector
+        ui->label_error->setVisible(false); // Hide the error message
+
+        QMessageBox::information(this, "Success", "User registered successfully! Returning to login page.");
+
+        this->hide();
+
+        loginwindow *l = new loginwindow;
+        l->show();
+
     }
     else
     {

@@ -1,14 +1,14 @@
 #include "usermainpage.h"
 #include "ui_usermainpage.h"
 
-userlogin::userlogin(QWidget *parent)
+usermainpage::usermainpage(QWidget *parent)
     : QDialog(parent)
-    , ui(new Ui::userlogin)
+    , ui(new Ui::usermainpage)
 {
     ui->setupUi(this);
 }
 
-userlogin::~userlogin()
+usermainpage::~usermainpage()
 {
     delete ui;
 }

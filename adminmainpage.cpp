@@ -1,14 +1,14 @@
 #include "adminmainpage.h"
 #include "ui_adminmainpage.h"
 
-adminlogin::adminlogin(QWidget *parent)
+adminmainpage::adminmainpage(QWidget *parent)
     : QDialog(parent)
-    , ui(new Ui::adminlogin)
+    , ui(new Ui::adminmainpage)
 {
     ui->setupUi(this);
 }
 
-adminlogin::~adminlogin()
+adminmainpage::~adminmainpage()
 {
     delete ui;
 }

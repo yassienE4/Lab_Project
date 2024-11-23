@@ -189,6 +189,19 @@
     <string>Register a new user</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_error">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>220</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Passwords do not match.</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
