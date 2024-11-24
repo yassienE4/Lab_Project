@@ -22,8 +22,11 @@ public:
     ~centerflow();
     void pushuser(users x);
     void pushadmin(admin x);
+    void pushrequest(item x);
+    void eraserequest(); // needs paramter
     vector<users> getvectoruser();
     vector<admin> getadminvector();
+    vector<item> getrentalRequest();
 };
 
 #endif // CENTERFLOW_H

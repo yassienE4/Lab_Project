@@ -138,6 +138,10 @@ void centerflow::pushadmin(admin x)
 {
     adminUser.push_back(x);
 }
+void centerflow::pushitem(item x)
+{
+    items.push_back(x);
+}
 
 vector<users> centerflow::getvectoruser()
 {
@@ -146,4 +150,16 @@ vector<users> centerflow::getvectoruser()
 vector<admin> centerflow::getadminvector()
 {
     return adminUser;
+}
+void centerflow::pushrequest(item x)
+{
+    rentalRequests.push_back(x);
+}
+void centerflow::eraserequest()
+{
+    //rentalRequests.erase();
+}
+vector<item> centerflow::getrentalRequest()
+{
+    return rentalRequests;
 }
