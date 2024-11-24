@@ -15,6 +15,12 @@ adminmanagerentals::~adminmanagerentals()
 
 void adminmanagerentals::on_listWidgetRentalRequest_itemDoubleClicked(QListWidgetItem *item)
 {
+    this->hide();
+
+
 
 }
 
+//in the new ui .cpp .h
+//in the new ui you have two buttons
+//accept= stock -1
