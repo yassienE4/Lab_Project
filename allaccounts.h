@@ -6,21 +6,22 @@ using namespace std;
 class allaccounts
 {
 private:
-        string email;
-        string name;
-        string username;
-        string contactinfo;
-        string password;
+        QString email;
+        QString name;
+        QString username;
+        QString contactinfo;
+        QString password;
         //bool admin;
 public:
     allaccounts();
-    allaccounts(string x, string y, string z, string w, string v);
-    string getemail();
-    string getname();
-    string getusername();
-    string getpassword();
-    void setname(string x);
-    void setpassword(string x);
+    allaccounts(QString x, QString y, QString z, QString w, QString v);
+    QString getemail();
+    QString getname();
+    QString getusername();
+    QString getpassword();
+    void setname(QString x);
+    void setpassword(QString x);
+    void setemail(QString x);
     virtual void login() = 0;
 };
 

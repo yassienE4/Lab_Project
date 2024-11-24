@@ -1,6 +1,6 @@
 #ifndef LOGINWINDOW_H
 #define LOGINWINDOW_H
-
+#include <centerflow.h>
 #include <QDialog>
 
 namespace Ui {
@@ -12,7 +12,7 @@ class loginwindow : public QDialog
     Q_OBJECT
 
 public:
-    explicit loginwindow(QWidget *parent = nullptr);
+    explicit loginwindow(QWidget *parent = nullptr, centerflow *center = nullptr);
     ~loginwindow();
 
 private slots:
@@ -24,6 +24,7 @@ private slots:
 
 private:
     Ui::loginwindow *ui;
+    centerflow *center;
 };
 
 #endif // LOGINWINDOW_H

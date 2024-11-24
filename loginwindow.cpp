@@ -4,10 +4,11 @@
 #include "usermainpage.h"
 #include "adminmainpage.h"
 #include <QDebug>
+#include "users.h"
 
-loginwindow::loginwindow(QWidget *parent)
+loginwindow::loginwindow(QWidget *parent, centerflow* center)
     : QDialog(parent)
-    , ui(new Ui::loginwindow)
+    , ui(new Ui::loginwindow), center(center)
 {
     ui->setupUi(this);
 }
@@ -24,23 +25,23 @@ void loginwindow::on_pushButton_Login_clicked()
 
     if(ui->lineEdit_adminkey->text().isEmpty()) // check if admin is blank
     {
-        vector<NormalUser>::iterator it = normalUsers.begin(); //creates an iterator and places it at begining of vector
-        while (it != normalUsers.end()) //transverses vector until username and password is found or vector is fully transversed
+        vector<users>::iterator it = center->getvectoruser().begin(); //creates an iterator and places it at begining of vector
+        while (it != center->getvectoruser().end()) //transverses vector until username and password is found or vector is fully transversed
         {
-            if ((it->username == username) && (it->password == password))
+            if ((it->getusername() == username) && (it->getpassword() == password))
             {
-                ui->labelinvalid->setVisible(false); // Hide the error message (labelinvalid)
+                ui->Labelinvalid->setVisible(false); // Hide the error message (labelinvalid)
 
-                this->hide()
+                this->hide();
 
-                usermainpage *UMP= new usermainpage();
-                UMP->show();
+                //usermainpage *UMP= new usermainpage();
+                //UMP->show();
                 return;
             }
             ++it;
         }
 
-        ui->labelinvalid->setVisible(true); // show the error message
+        ui->Labelinvalid->setVisible(true); // show the error message
         // check if username and passwords exist in vector(normalusers)
         //call normaluser function esmo openusermainpage = show the usermainpage
     }
@@ -49,17 +50,17 @@ void loginwindow::on_pushButton_Login_clicked()
         if(ui->lineEdit_adminkey->text() == "123")// admin key
         {
 
-            vector<AdnminUser>::iterator it = adminUser.begin();
-            while (it != adminUser.end())
+            vector<admin>::iterator it = center->getadminvector().begin();
+            while (it != center->getadminvector().end())
             {
-                if ((it->username == username) && (it->password == password))
+                if ((it->getusername() == username) && (it->getpassword() == password))
                 {
-                    ui->labelinvalid->setVisible(false); // Hide the error message
+                    ui->Labelinvalid->setVisible(false); // Hide the error message
 
-                    this->hide()
+                    this->hide();
 
-                    adminmainpage *AMP = new adminmainpage();
-                    AMP->show();
+                    //adminmainpage *AMP = new adminmainpage();
+                    //AMP->show();
                     return;
                 }
                     return;
@@ -67,7 +68,7 @@ void loginwindow::on_pushButton_Login_clicked()
                 ++it;
             }
 
-            ui->labelinvalid->setVisible(true); // show the error message
+            ui->Labelinvalid->setVisible(true); // show the error message
             // check if username and passwords exist in vector(adminuser)
             //call adminuser function esmo openadminusermainpage = show the adminusermainpage
         }
@@ -87,7 +88,7 @@ void loginwindow::on_pushButton_Clear_clicked()
 void loginwindow::on_pushButton_Back_clicked()
 {
     this->hide();
-    MainWindow *m = new MainWindow();
+    MainWindow *m = new MainWindow(nullptr, center);
     m->show();
 }
 

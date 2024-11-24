@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include "loginwindow.h"
 #include "registerwindow.h"
+#include "centerflow.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -15,7 +17,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    MainWindow(QWidget *parent = nullptr, centerflow *center = nullptr);
     ~MainWindow();
 
 private slots:
@@ -25,5 +27,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    centerflow *center;
 };
 #endif // MAINWINDOW_H

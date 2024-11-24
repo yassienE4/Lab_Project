@@ -16,16 +16,16 @@ private:
     int rentalPeriod;
 public:
     item();
-    item(string name, double price, int demand, string description = "", bool available = true, int rentalPeriod = 0);
+    item(QString name, double price, int demand, QString description = "", bool available = true, int rentalPeriod = 0);
     bool isavailable();
     void updateprice(double Update);
     void updatepricedemand(double m);
-    void updatename(const string& Nn);
-    void updatedescription(const string& Nd);
+    void updatename(const QString& Nn);
+    void updatedescription(const QString& Nd);
     void updaterental(int ur);
     void updateavailability(bool Av);
     void printItem();
-    void removeItem(vector<item> &items, const string &itemName);
+    void removeItem(vector<item> &items, const QString &itemName);
     bool operator==(const item& other);
     void setname(QString x);
     void setprice(double x);

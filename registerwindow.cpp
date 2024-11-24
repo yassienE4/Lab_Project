@@ -2,10 +2,12 @@
 #include "ui_registerwindow.h"
 #include "mainwindow.h"
 #include <QMessageBox>
+#include "users.h"
+#include "centerflow.h"
 
-registerwindow::registerwindow(QWidget *parent)
+registerwindow::registerwindow(QWidget *parent, centerflow* center)
     : QDialog(parent)
-    , ui(new Ui::registerwindow)
+    , ui(new Ui::registerwindow), center(center)
 {
     ui->setupUi(this);
 }
@@ -30,11 +32,11 @@ void registerwindow::on_pushButton_Register_clicked()
     if(ui->lineEdit_AdminKey->text() == "") //if admin key is empty then it is user registering
     {
         users newUser; //new object type user
-        newUser.username = username;
-        newUser.email = email;        //sets info in line edits to their feilds
-        newUser.password = password;
+        newUser.setname(ui->lineEdit_username->text());
+        newUser.setemail(ui->lineEdit_Email->text());      //sets info in line edits to their feilds
+        newUser.setpassword(ui->lineEdit_Password->text());
 
-        normalUsers.push_back(newUser);// Add the new user to the normalUsers vector
+        center->pushuser(newUser); // Add the new user to the normalUsers vector
         ui->label_error->setVisible(false); // Hide the error message
 
         QMessageBox::information(this, "Success", "User registered successfully! Returning to login page.");

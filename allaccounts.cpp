@@ -5,7 +5,7 @@ allaccounts::allaccounts()
 {
 
 }
-allaccounts::allaccounts(string x, string y, string z, string w, string v)
+allaccounts::allaccounts(QString x, QString y, QString z, QString w, QString v)
 {
      email = x;
      name = y;
@@ -13,29 +13,34 @@ allaccounts::allaccounts(string x, string y, string z, string w, string v)
      contactinfo = w;
      password = v;
 }
-string allaccounts::getemail()
+QString allaccounts::getemail()
 {
     return email;
 }
-string allaccounts::getname()
+QString allaccounts::getname()
 {
     return name;
 }
-string allaccounts::getusername()
+QString allaccounts::getusername()
 {
     return username;
 }
-string allaccounts::getpassword()
+QString allaccounts::getpassword()
 {
     return password;
 }
 
-void allaccounts::setname(string x)
+void allaccounts::setname(QString x)
 {
     name = x;
 }
 
-void allaccounts::setpassword(string x)
+void allaccounts::setpassword(QString x)
 {
     password = x;
+}
+
+void allaccounts::setemail(QString x)
+{
+    email = x;
 }

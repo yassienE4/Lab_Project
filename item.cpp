@@ -5,7 +5,7 @@
 using namespace std;
 
 // Constructor
-item::item(string n, double p, int d, string desc, bool a, int rp) {
+item::item(QString n, double p, int d, QString desc, bool a, int rp) {
     name = n;
     price = p;
     demand = d;
@@ -27,11 +27,11 @@ void item::updatepricedemand(double multiplier) {
     price *= (1 + multiplier * demand);
 }
 
-void item::updatename(const string& newName) {
+void item::updatename(const QString& newName) {
     name = newName;
 }
 
-void item::updatedescription(const string& newDescription) {
+void item::updatedescription(const QString& newDescription) {
     description = newDescription;
 }
 
@@ -44,8 +44,8 @@ void item::updateavailability(bool isAvailable) {
 }
 
 void item::printItem() {
-    cout << "Name: " << name << ", Price: " << price << ", Demand: " << demand
-         << ", Description: " << description << ", Available: " << (available ? "Yes" : "No")
+    cout << "Name: " << name.toStdString() << ", Price: " << price << ", Demand: " << demand
+         << ", Description: " << description.toStdString() << ", Available: " << (available ? "Yes" : "No")
          << ", Rental Period: " << rentalPeriod << " days" << endl;
 }
 
@@ -53,7 +53,8 @@ bool item::operator==(const item& other)  {
     return name == other.name && price == other.price && demand == other.demand;
 }
 
-void item::removeItem(vector<item> &items, const string &itemName)
+/*
+void item::removeItem(vector<item> &items, const QString &itemName)
 {
     for (int i = 0; i < items.size(); ++i)
     {
@@ -73,6 +74,7 @@ void item::removeItem(vector<item> &items, const string &itemName)
     string message = "Item not found: " + itemName;
     QMessageBox::warning(nullptr, "Error", message);
 }
+*/
 
 void item::setname(QString x)
 {
