@@ -18,7 +18,10 @@ int main(int argc, char *argv[])
     // 2.w->show()
     //
     // 3. center.getvectoruser();
+    for(int i =0; i < size; i++)
+    {
 
+    }
 
 
     return a.exec();

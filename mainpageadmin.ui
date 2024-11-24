@@ -13,6 +13,58 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>40</y>
+     <width>151</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Welcome &quot;Name&quot;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>190</y>
+     <width>121</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Manage Items</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>190</y>
+     <width>121</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Manage Rentals</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>190</y>
+     <width>121</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Manage Users</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

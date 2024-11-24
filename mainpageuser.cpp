@@ -12,3 +12,9 @@ mainpageuser::~mainpageuser()
 {
     delete ui;
 }
+
+void mainpageuser::on_pushButton_Browse_clicked()
+{
+
+}
+

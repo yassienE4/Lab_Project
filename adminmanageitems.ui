@@ -16,10 +16,10 @@
   <widget class="QPushButton" name="pushButton_delete">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>30</y>
-     <width>61</width>
-     <height>16</height>
+     <x>380</x>
+     <y>310</y>
+     <width>71</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
@@ -76,7 +76,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Update Name:</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label_demand">
@@ -89,7 +89,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Update price demand:</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label_rental">
@@ -102,7 +102,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Update rental:</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label_decription">
@@ -115,7 +115,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Update description:</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_stock">
@@ -148,7 +148,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>update stock:</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="label_availability">
@@ -161,7 +161,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Update availability:</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_period">
@@ -184,7 +184,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Update rental period: </string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
@@ -192,64 +192,64 @@
     <rect>
      <x>280</x>
      <y>250</y>
-     <width>80</width>
-     <height>18</height>
+     <width>141</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>Update rental period: </string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
      <x>280</x>
-     <y>220</y>
-     <width>80</width>
-     <height>18</height>
+     <y>207</y>
+     <width>131</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>update stock:</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_3">
    <property name="geometry">
     <rect>
      <x>280</x>
-     <y>170</y>
-     <width>80</width>
-     <height>18</height>
+     <y>167</y>
+     <width>121</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>Update availability:</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_4">
    <property name="geometry">
     <rect>
      <x>280</x>
-     <y>130</y>
-     <width>80</width>
-     <height>18</height>
+     <y>127</y>
+     <width>121</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>Update rental:</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_5">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>100</y>
-     <width>80</width>
-     <height>18</height>
+     <x>279</x>
+     <y>97</y>
+     <width>101</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>Update description:</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_6">
@@ -257,25 +257,25 @@
     <rect>
      <x>290</x>
      <y>60</y>
-     <width>80</width>
-     <height>18</height>
+     <width>81</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>Update price demand:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_originalname">
+  <widget class="QPushButton" name="pushButton_7">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>290</x>
      <y>30</y>
-     <width>61</width>
-     <height>20</height>
+     <width>81</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string/>
+    <string>Update Name:</string>
    </property>
   </widget>
  </widget>

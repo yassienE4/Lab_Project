@@ -138,6 +138,10 @@ void centerflow::pushadmin(admin x)
 {
     adminUser.push_back(x);
 }
+void centerflow::pushitem(item x)
+{
+    items.push_back(x);
+}
 
 vector<users> centerflow::getvectoruser()
 {

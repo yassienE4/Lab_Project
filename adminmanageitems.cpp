@@ -12,3 +12,18 @@ adminmanageitems::~adminmanageitems()
 {
     delete ui;
 }
+
+void adminmanageitems::on_pushButton_Clear_clicked()
+{
+    ui->label_availability->setText("");
+    //for all labels
+}
+
+//go left,go right
+// ui->name->settext(item[index].name)
+// index --
+// if(index = 0) cant go left
+
+// item[index] = ui->lineedit.name->text()
+
+
