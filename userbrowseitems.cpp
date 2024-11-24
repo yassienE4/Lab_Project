@@ -47,7 +47,7 @@ void userbrowseitems::searchItems()
         }
 
        // create a string to display in the next step
-        QString itemText = item.getName() + ": " + QString::number(item.getPrice()) + " USD [" + QString::number(item.getStock()) + " in stock]";
+        QString itemText = i.getName() + ": " + QString::number(i.getPrice()) + " USD [" + QString::number(i.getStock()) + " in stock]";
 
 
         ui->listWidget_results->addItem(itemText); // Add the item to the QListWidget
@@ -69,44 +69,32 @@ void userbrowseitems::on_pushButtonSearch_clicked()
 
 void userbrowseitems::on_listWidget_results_itemDoubleClicked(QListWidgetItem *item)
 {
-    void userbrowseitems::onItemClicked(QListWidgetItem *selectedItem)
     {
-        QString itemText = selectedItem->text(); // Get the text of the selected item
+        QString itemText = item->text(); // Get the text of the selected item
 
         // Extract the item name
         QString itemName = itemText.split(":").first().trimmed();
 
-        // Reserve the item
-        reserveItem(itemName);
+        // Add the item to rental requests
+        addRentalRequest(itemName);
     }
 }
-void userbrowseitems::reserveItem(const QString &itemName)
+void userbrowseitems::addRentalRequest(const QString &itemName)
 {
+    for (Item &item : items) // Iterate through the vector to find the item
     {
-        for (Item &item : items) // Iterate through the vector to find the item
+        if (item.getName() == itemName)
         {
-            if (item.getName() == itemName)
-            {
-                if (item.isAvailable()) // Check if the item is available
-                {
-                    item.setStock(item.getStock() - 1); // Decrement stock
-                    QString message = "You have successfully reserved '" + itemName + "'.";
-                    QMessageBox::information(this, "Reservation Successful", message);
+            // Add the item to rentalRequests instead of reserving it right away
+            rentalRequests->append(item);  // Add item to rentalRequests vector
 
-                    // refresh ui after reservation is successful
-                    searchItems();
-                }
-                else
-                {
-                    QString message = "'" + itemName + "' is out of stock.";
-                    QMessageBox::warning(this, "Reservation Failed", message);
-                }
-                return; // Exit the function after processing the item
-            }
+            QString message = "'" + itemName + "' has been added to your rental requests.";
+            QMessageBox::information(this, "Item Added", message);
+            return; // Exit the function after adding the item to the rental requests
         }
-
-        // If the item is not found
-        QString message = "Item not found: " + itemName;
-        QMessageBox::warning(this, "Error", message);
     }
+
+    // If the item is not found
+    QString message = "Item not found: " + itemName;
+    QMessageBox::warning(this, "Error", message);
 }

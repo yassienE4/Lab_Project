@@ -28,8 +28,11 @@ private slots:
 private:
     Ui::userbrowseitems *ui;
     QVector<item> *items;
+    QVector<Item> *rentalRequests;  // Vector to hold reserved items (rental requests)
+
     void searchItems();
-    void reserveItem(const QString &itemName);
+    //void reserveItem(const QString &itemName);
+    void addRentalRequest(const QString &itemName);
 };
 
 #endif // USERBROWSEITEMS_H
