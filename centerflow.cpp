@@ -143,10 +143,10 @@ void centerflow::pushitem(item x)
     items.push_back(x);
 }
 
-vector<users> centerflow::getvectoruser()
-{
-    return normalUsers;
+vector<users>& centerflow::getvectoruser() {
+    return normalUsers;  // Ensure normalUsers is not a temporary object
 }
+
 vector<admin> centerflow::getadminvector()
 {
     return adminUser;
