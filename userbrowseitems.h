@@ -2,6 +2,8 @@
 #define USERBROWSEITEMS_H
 
 #include <QDialog>
+#include <QVector>
+#include "item.h"
 
 namespace Ui {
 class userbrowseitems;
@@ -17,6 +19,7 @@ public:
 
 private:
     Ui::userbrowseitems *ui;
+    QVector<pair<int,item>> *items;
 };
 
 #endif // USERBROWSEITEMS_H
