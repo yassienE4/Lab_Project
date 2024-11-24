@@ -27,6 +27,7 @@ public:
     vector<users> getvectoruser();
     vector<admin> getadminvector();
     vector<item> getrentalRequest();
+    vector<item> &getitems();
 };
 
 #endif // CENTERFLOW_H

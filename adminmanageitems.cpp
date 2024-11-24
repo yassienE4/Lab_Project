@@ -1,11 +1,12 @@
 #include "adminmanageitems.h"
 #include "ui_adminmanageitems.h"
 
-adminmanageitems::adminmanageitems(QWidget *parent)
+adminmanageitems::adminmanageitems(QWidget *parent, centerflow *center)
     : QDialog(parent)
-    , ui(new Ui::adminmanageitems)
+    , ui(new Ui::adminmanageitems), center(center)
 {
     ui->setupUi(this);
+    int index = 0;
 }
 
 adminmanageitems::~adminmanageitems()
@@ -30,6 +31,7 @@ void adminmanageitems::on_pushButton_Clear_clicked()
 void adminmanageitems::on_pushButton_name_clicked()
 {
     QString temp = ui->lineEdit_name->text();
-    center.users updatename(const QString& temp);
+    center->getitems()[0].updatename(temp); // instead of 0 index
+    ui->label_name->setText(temp);
 }
 

@@ -163,3 +163,8 @@ vector<item> centerflow::getrentalRequest()
 {
     return rentalRequests;
 }
+
+vector<item> &centerflow::getitems()
+{
+    return items;
+}

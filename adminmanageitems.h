@@ -2,7 +2,7 @@
 #define ADMINMANAGEITEMS_H
 
 #include <QDialog>
-
+#include "centerflow.h"
 namespace Ui {
 class adminmanageitems;
 }
@@ -12,7 +12,7 @@ class adminmanageitems : public QDialog
     Q_OBJECT
 
 public:
-    explicit adminmanageitems(QWidget *parent = nullptr);
+    explicit adminmanageitems(QWidget *parent = nullptr, centerflow *center = nullptr);
     ~adminmanageitems();
 
 private slots:
@@ -24,6 +24,7 @@ private slots:
 
 private:
     Ui::adminmanageitems *ui;
+    centerflow *center;
 };
 
 #endif // ADMINMANAGEITEMS_H
