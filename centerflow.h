@@ -16,7 +16,7 @@ private:
     QVector<admin> *adminUser;
    //QVector<pair<int,item>> *items;
     QVector<item> *items;
-
+    QVector<item> *rentalRequests;
 public:
     centerflow();
     ~centerflow();
