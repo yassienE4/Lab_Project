@@ -28,6 +28,8 @@ public:
     void setname(string x);
     void setprice(double x);
     void setdemand(int x);
+    int getstock();
+    void setstock();
 };
 
 #endif // ITEM_H

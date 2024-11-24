@@ -14,8 +14,9 @@ item::item(string n, double p, int d, string desc, bool a, int rp) {
     rentalPeriod = rp;
 }
 
-bool item::isavailable() {
-    return available;
+bool item::isavailable() const
+{
+    return stock > 0; // Available only if stock is greater than 0
 }
 
 void item::updateprice(double newPrice) {
