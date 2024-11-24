@@ -7,6 +7,7 @@
 #include "admin.h"
 #include <Qpair>
 #include "item.h"
+#include <QString>
 
 centerflow::centerflow()
 {
@@ -67,14 +68,15 @@ centerflow::centerflow()
             string temp;
             string a;
             getline(myfile,a);
-            t.setname(a);
+            QString x = x.fromStdString(a);
+            t.setname(x);
             getline(myfile,a);
             t.setprice(stod(a));
             getline(myfile,a);
             t.setdemand(stoi(a));
-            getline(myfile,temp);
-            pair<int, item> p = {stoi(temp), t};
-            items->push_back(p);
+            getline(myfile,a);
+            t.setstock(stoi(a));
+            items->push_back(t);
         }
         myfile.close();
     }
