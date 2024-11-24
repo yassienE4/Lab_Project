@@ -21,7 +21,7 @@ public:
     ~userbrowseitems();
 
 private slots:
-    void on_MinPriceSpinBox_textChanged(const QString &arg1);
+    //void on_MinPriceSpinBox_textChanged(const QString &arg1);
 
     void on_pushButtonSearch_clicked();
 

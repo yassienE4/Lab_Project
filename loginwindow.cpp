@@ -1,8 +1,8 @@
 #include "loginwindow.h"
 #include "ui_loginwindow.h"
 #include "mainwindow.h"
-#include "usermainpage.h"
-#include "adminmainpage.h"
+//#include "usermainpage.h"
+//#include "adminmainpage.h"
 #include <QDebug>
 #include "users.h"
 
@@ -61,8 +61,6 @@ void loginwindow::on_pushButton_Login_clicked()
 
                     //adminmainpage *AMP = new adminmainpage();
                     //AMP->show();
-                    return;
-                }
                     return;
                 }
                 ++it;

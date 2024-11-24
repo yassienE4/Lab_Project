@@ -5,13 +5,25 @@
 using namespace std;
 
 // Constructor
-item::item(QString n, double p, int d, QString desc, bool a, int rp) {
+
+item::item()
+{
+    name ="";
+    price = 0;
+    demand =0;
+    description = "";
+    available = 0;
+    rentalPeriod = 0;
+    stock = 0;
+}
+item::item(QString n, double p, int d, QString desc, bool a, int rp, int w) {
     name = n;
     price = p;
     demand = d;
     description = desc;
     available = a;
     rentalPeriod = rp;
+    stock = w;
 }
 
 bool item::isavailable()
@@ -108,4 +120,12 @@ int item::getdemand()
 int item::getrentalperiod()
 {
     return rentalPeriod;
+}
+int item::getstock()
+{
+    return stock;
+}
+void item::setstock(int x)
+{
+    stock = x;
 }

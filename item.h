@@ -16,7 +16,7 @@ private:
     int rentalPeriod;
 public:
     item();
-    item(QString name, double price, int demand, QString description = "", bool available = true, int rentalPeriod = 0);
+    item(QString name, double price, int demand, QString description = "", bool available = true, int rentalPeriod = 0, int w = 0); //
     bool isavailable();
     void updateprice(double Update);
     void updatepricedemand(double m);
@@ -30,13 +30,13 @@ public:
     void setname(QString x);
     void setprice(double x);
     void setdemand(int x);
-    int getstock();
+    int getstock(); //
     QString getname();
     QString getdescription();
     double getprice();
     int getdemand();
     int getrentalperiod();
-    void setstock(int x);
+    void setstock(int x); //
 };
 
 #endif // ITEM_H

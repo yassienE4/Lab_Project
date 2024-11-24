@@ -10,7 +10,6 @@ CONFIG += c++17
 
 SOURCES += \
     admin.cpp \
-    adminmainpage.cpp \
     adminmanageitems.cpp \
     adminmanagerentals.cpp \
     adminmanageusers.cpp \
@@ -23,14 +22,12 @@ SOURCES += \
     registerwindow.cpp \
     reserveitems.cpp \
     userbrowseitems.cpp \
-    usermainpage.cpp \
     users.cpp \
     userviewrentalhistory.cpp \
     userviewreservations.cpp
 
 HEADERS += \
     admin.h \
-    adminmainpage.h \
     adminmanageitems.h \
     adminmanagerentals.h \
     adminmanageusers.h \
@@ -42,13 +39,11 @@ HEADERS += \
     registerwindow.h \
     reserveitems.h \
     userbrowseitems.h \
-    usermainpage.h \
     users.h \
     userviewrentalhistory.h \
     userviewreservations.h
 
 FORMS += \
-    adminmainpage.ui \
     adminmanageitems.ui \
     adminmanagerentals.ui \
     adminmanageusers.ui \
@@ -57,7 +52,6 @@ FORMS += \
     registerwindow.ui \
     reserveitems.ui \
     userbrowseitems.ui \
-    usermainpage.ui \
     userviewrentalhistory.ui \
     userviewreservations.ui
 
