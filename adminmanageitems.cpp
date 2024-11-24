@@ -27,3 +27,9 @@ void adminmanageitems::on_pushButton_Clear_clicked()
 // item[index] = ui->lineedit.name->text()
 
 
+void adminmanageitems::on_pushButton_name_clicked()
+{
+    QString temp = ui->lineEdit_name->text();
+    center.users updatename(const QString& temp);
+}
+

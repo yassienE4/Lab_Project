@@ -18,6 +18,10 @@ public:
 private slots:
     void on_pushButton_Clear_clicked();
 
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_name_clicked();
+
 private:
     Ui::adminmanageitems *ui;
 };
