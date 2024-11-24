@@ -15,6 +15,15 @@ public:
     explicit mainpageadmin(QWidget *parent = nullptr);
     ~mainpageadmin();
 
+private slots:
+    void on_pushButton_item_clicked();
+
+    void on_pushButton_Rental_clicked();
+
+    void on_pushButton_user_clicked();
+
+    void on_pushButton_Back_clicked();
+
 private:
     Ui::mainpageadmin *ui;
 };

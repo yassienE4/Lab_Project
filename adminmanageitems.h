@@ -15,6 +15,9 @@ public:
     explicit adminmanageitems(QWidget *parent = nullptr);
     ~adminmanageitems();
 
+private slots:
+    void on_pushButton_Clear_clicked();
+
 private:
     Ui::adminmanageitems *ui;
 };

@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="label_welcome">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -26,11 +26,11 @@
     <string>Welcome &quot;Name&quot;</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButton_item">
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>190</y>
+     <y>140</y>
      <width>121</width>
      <height>71</height>
     </rect>
@@ -39,11 +39,11 @@
     <string>Manage Items</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="pushButton_Rental">
    <property name="geometry">
     <rect>
      <x>130</x>
-     <y>190</y>
+     <y>140</y>
      <width>121</width>
      <height>71</height>
     </rect>
@@ -52,17 +52,30 @@
     <string>Manage Rentals</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="pushButton_user">
    <property name="geometry">
     <rect>
      <x>260</x>
-     <y>190</y>
+     <y>140</y>
      <width>121</width>
      <height>71</height>
     </rect>
    </property>
    <property name="text">
     <string>Manage Users</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Back">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>250</y>
+     <width>100</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Back</string>
    </property>
   </widget>
  </widget>

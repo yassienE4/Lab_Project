@@ -18,10 +18,14 @@ int main(int argc, char *argv[])
     // 2.w->show()
     //
     // 3. center.getvectoruser();
-    for(int i =0; i < size; i++)
-    {
+    if(clicked button left)
+        i--
+    if(clicked right)
+        i++
 
-    }
+        array[i];
+    for()
+
 
 
     return a.exec();

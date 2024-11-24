@@ -30,3 +30,9 @@ void mainpageadmin::on_pushButton_user_clicked()
 
 }
 
+
+void mainpageadmin::on_pushButton_Back_clicked()
+{
+
+}
+

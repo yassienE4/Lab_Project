@@ -13,17 +13,17 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="pushButton_delete">
+  <widget class="QPushButton" name="pushButton_Clear">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>310</y>
+     <x>240</x>
+     <y>270</y>
      <width>71</width>
      <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>Delete</string>
+    <string>clear</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_description">
@@ -45,6 +45,9 @@
      <height>21</height>
     </rect>
    </property>
+   <property name="text">
+    <string/>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_demand">
    <property name="geometry">
@@ -54,6 +57,9 @@
      <width>113</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_rental">
@@ -76,7 +82,7 @@
     </rect>
    </property>
    <property name="text">
-    <string/>
+    <string>item name</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_demand">
@@ -89,7 +95,7 @@
     </rect>
    </property>
    <property name="text">
-    <string/>
+    <string>item price</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_rental">
@@ -102,7 +108,7 @@
     </rect>
    </property>
    <property name="text">
-    <string/>
+    <string>item rental</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_decription">
@@ -115,7 +121,7 @@
     </rect>
    </property>
    <property name="text">
-    <string/>
+    <string>item description</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_stock">
@@ -148,7 +154,7 @@
     </rect>
    </property>
    <property name="text">
-    <string/>
+    <string>item stock</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_availability">
@@ -161,7 +167,7 @@
     </rect>
    </property>
    <property name="text">
-    <string/>
+    <string>item availbility</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_period">
@@ -177,14 +183,14 @@
   <widget class="QLabel" name="label_period">
    <property name="geometry">
     <rect>
-     <x>60</x>
+     <x>40</x>
      <y>250</y>
-     <width>91</width>
-     <height>16</height>
+     <width>111</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string/>
+    <string>item rental period </string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
@@ -270,12 +276,77 @@
     <rect>
      <x>290</x>
      <y>30</y>
-     <width>81</width>
+     <width>111</width>
      <height>21</height>
     </rect>
    </property>
    <property name="text">
     <string>Update Name:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_8">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>320</y>
+     <width>100</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>goleft</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_9">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>320</y>
+     <width>100</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>goright</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>300</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>vector index (i)</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_10">
+   <property name="geometry">
+    <rect>
+     <x>329</x>
+     <y>330</y>
+     <width>131</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>delete from vector</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_11">
+   <property name="geometry">
+    <rect>
+     <x>329</x>
+     <y>300</y>
+     <width>141</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>add to vector</string>
    </property>
   </widget>
  </widget>

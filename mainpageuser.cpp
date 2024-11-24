@@ -18,3 +18,27 @@ void mainpageuser::on_pushButton_Browse_clicked()
 
 }
 
+
+void mainpageuser::on_pushButton_Reserve_clicked()
+{
+
+}
+
+
+void mainpageuser::on_pushButton_View_clicked()
+{
+
+}
+
+
+void mainpageuser::on_pushButton_History_clicked()
+{
+
+}
+
+
+void mainpageuser::on_pushButton_Back_clicked()
+{
+
+}
+
