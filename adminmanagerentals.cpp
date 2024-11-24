@@ -12,3 +12,9 @@ adminmanagerentals::~adminmanagerentals()
 {
     delete ui;
 }
+
+void adminmanagerentals::on_listWidgetRentalRequest_itemDoubleClicked(QListWidgetItem *item)
+{
+
+}
+
