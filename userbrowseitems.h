@@ -3,7 +3,9 @@
 
 #include <QDialog>
 #include <QVector>
+#include <vector>
 #include "item.h"
+#include <QListWidgetItem>
 #include "centerflow.h"
 
 namespace Ui {
@@ -27,8 +29,8 @@ private slots:
 
 private:
     Ui::userbrowseitems *ui;
-    QVector<item> *items;
-    QVector<Item> *rentalRequests;  // Vector to hold reserved items (rental requests)
+    vector<item> *items;
+    vector<item> *rentalRequests;  // Vector to hold reserved items (rental requests)
 
     void searchItems();
     //void reserveItem(const QString &itemName);

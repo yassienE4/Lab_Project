@@ -53,30 +53,34 @@ bool item::operator==(const item& other)  {
     return name == other.name && price == other.price && demand == other.demand;
 }
 
-void Item::removeItem(QVector<Item> &items, const QString &itemName)
+void item::removeItem(vector<item> &items, const string &itemName)
 {
     for (int i = 0; i < items.size(); ++i)
     {
-        if (items[i].getName() == itemName)
+        if (items[i].getname() == itemName)
         {
             // Remove the item from the vector
-            items.remove(i);
+            items.erase[i];
 
             // Display a success message
-            QString message = "'" + itemName + "' has been removed.";
+            string message = "'" + itemName + "' has been removed.";
             QMessageBox::information(nullptr, "Item Removed", message);
             return;
         }
     }
 
     // If the item is not found
-    QString message = "Item not found: " + itemName;
+    string message = "Item not found: " + itemName;
     QMessageBox::warning(nullptr, "Error", message);
 }
 
-void item::setname(string x)
+void item::setname(QString x)
 {
     name = x;
+}
+QString item::getname()
+{
+    return name;
 }
 void item::setprice(double x)
 {
@@ -85,4 +89,21 @@ void item::setprice(double x)
 void item::setdemand(int x)
 {
     demand = x;
+}
+
+QString item::getdescription()
+{
+    return description;
+}
+double item::getprice()
+{
+    return price;
+}
+int item::getdemand()
+{
+    return demand;
+}
+int item::getrentalperiod()
+{
+    return rentalPeriod;
 }

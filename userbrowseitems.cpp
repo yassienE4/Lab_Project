@@ -1,6 +1,8 @@
 #include "userbrowseitems.h"
 #include "ui_userbrowseitems.h"
 #include <QMessageBox>
+#include "item.h"
+#include <string>
 userbrowseitems::userbrowseitems(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::userbrowseitems)
@@ -24,18 +26,19 @@ void userbrowseitems::searchItems()
     ui->listWidget_results->clear(); // Clear previous search results
 
     // Iterate through the QVector of items and filter based on the search criteria
-    for (const item &i : *items)
+
+    for (auto i : *items)
     {
         // Check if the item matches the keyword (case insensitive search in name or description)
         if (!keyword.isEmpty() &&
-            !i.getName().contains(keyword, Qt::CaseInsensitive) &&
-            !i.getDescription().contains(keyword, Qt::CaseInsensitive))
+            !i.getname().contains(keyword, Qt::CaseInsensitive) &&
+            !i.getdescription().contains(keyword, Qt::CaseInsensitive))
         {
             continue; // Skip this item if it does not match the keyword
         }
 
         // Check if the item price is within the specified price range
-        if (i.getPrice() < minPrice || i.getPrice() > maxPrice)
+        if (i.getprice() < minPrice || i.getprice() > maxPrice)
         {
             continue; // Skip this item if it does not match the price range
         }
@@ -47,7 +50,7 @@ void userbrowseitems::searchItems()
         }
 
        // create a string to display in the next step
-        QString itemText = i.getName() + ": " + QString::number(i.getPrice()) + " USD [" + QString::number(i.getStock()) + " in stock]";
+        QString itemText = i.getname() + ": " + QString::number(i.getprice()) + " USD [" + QString::number(i.getstock()) + " in stock]";
 
 
         ui->listWidget_results->addItem(itemText); // Add the item to the QListWidget
@@ -81,12 +84,12 @@ void userbrowseitems::on_listWidget_results_itemDoubleClicked(QListWidgetItem *i
 }
 void userbrowseitems::addRentalRequest(const QString &itemName)
 {
-    for (Item &item : items) // Iterate through the vector to find the item
+    for (auto item : *items) // Iterate through the vector to find the item
     {
-        if (item.getName() == itemName)
+        if (item.getname() == itemName)
         {
             // Add the item to rentalRequests instead of reserving it right away
-            rentalRequests->append(item);  // Add item to rentalRequests vector
+            rentalRequests->push_back(item);  // Add item to rentalRequests vector
 
             QString message = "'" + itemName + "' has been added to your rental requests.";
             QMessageBox::information(this, "Item Added", message);

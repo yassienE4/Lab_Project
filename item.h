@@ -1,15 +1,17 @@
 #ifndef ITEM_H
 #define ITEM_H
 #include <string>
+#include <QMessageBox>
+#include <QString>
 using namespace std;
 class item
 {
 private:
-    string name;
+    QString name;
     double price;
     int stock;
     int demand;
-    string description;
+    QString description;
     bool available;
     int rentalPeriod;
 public:
@@ -23,12 +25,17 @@ public:
     void updaterental(int ur);
     void updateavailability(bool Av);
     void printItem();
-    void removeItem(item x);
+    void removeItem(vector<item> &items, const string &itemName);
     bool operator==(const item& other);
-    void setname(string x);
+    void setname(QString x);
     void setprice(double x);
     void setdemand(int x);
     int getstock();
+    QString getname();
+    QString getdescription();
+    double getprice();
+    int getdemand();
+    int getrentalperiod();
     void setstock(int x);
 };
 
