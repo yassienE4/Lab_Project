@@ -53,7 +53,7 @@ bool item::operator==(const item& other)  {
     return name == other.name && price == other.price && demand == other.demand;
 }
 
-vector<pair<int, item>> Qlist;
+QVector<item> *items;
 void removeitem(const item& x) {
     auto it = Qlist.begin();
     while (it != Qlist.end()) {

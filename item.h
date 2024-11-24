@@ -29,7 +29,7 @@ public:
     void setprice(double x);
     void setdemand(int x);
     int getstock();
-    void setstock();
+    void setstock(int x);
 };
 
 #endif // ITEM_H
