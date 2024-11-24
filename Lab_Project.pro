@@ -18,6 +18,8 @@ SOURCES += \
     item.cpp \
     loginwindow.cpp \
     main.cpp \
+    mainpageadmin.cpp \
+    mainpageuser.cpp \
     mainwindow.cpp \
     registerwindow.cpp \
     reserveitems.cpp \
@@ -35,6 +37,8 @@ HEADERS += \
     centerflow.h \
     item.h \
     loginwindow.h \
+    mainpageadmin.h \
+    mainpageuser.h \
     mainwindow.h \
     registerwindow.h \
     reserveitems.h \
@@ -48,6 +52,8 @@ FORMS += \
     adminmanagerentals.ui \
     adminmanageusers.ui \
     loginwindow.ui \
+    mainpageadmin.ui \
+    mainpageuser.ui \
     mainwindow.ui \
     registerwindow.ui \
     reserveitems.ui \
