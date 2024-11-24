@@ -4,7 +4,7 @@
 #include "users.h"
 #include "admin.h"
 #include "item.h"
-#include <QVector>
+#include <vector>
 #include <QList>
 class centerflow
 {
@@ -12,11 +12,11 @@ private:
     int size;
     int adminsize;
     int itemsize;
-    QVector<users> *normalUsers;
-    QVector<admin> *adminUser;
+    vector<users> *normalUsers;
+    vector<admin> *adminUser;
    //QVector<pair<int,item>> *items;
-    QVector<item> *items;
-    QVector<item> *rentalRequests;
+    vector<item> *items;
+    vector<item> *rentalRequests;
 public:
     centerflow();
     ~centerflow();

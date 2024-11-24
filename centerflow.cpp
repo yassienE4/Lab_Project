@@ -93,7 +93,7 @@ centerflow::~centerflow()
         myfile<<to_string(size) + "\n";
         for (int i = 0; i < size; i++)
         {
-            myfile<< normalUsers[i].getname() + "\n";
+            myfile<< normalUsers[i]->getname() + "\n";
             myfile<< normalUsers[i].passwords + "\n";
         }
         myfile.close();
