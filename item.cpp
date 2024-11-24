@@ -53,16 +53,25 @@ bool item::operator==(const item& other)  {
     return name == other.name && price == other.price && demand == other.demand;
 }
 
-QVector<item> *items;
-void removeitem(const item& x) {
-    auto it = Qlist.begin();
-    while (it != Qlist.end()) {
-        if (it->second == x) {
-            it = Qlist.erase(it);
-        } else {
-            ++it;
+void Item::removeItem(QVector<Item> &items, const QString &itemName)
+{
+    for (int i = 0; i < items.size(); ++i)
+    {
+        if (items[i].getName() == itemName)
+        {
+            // Remove the item from the vector
+            items.remove(i);
+
+            // Display a success message
+            QString message = "'" + itemName + "' has been removed.";
+            QMessageBox::information(nullptr, "Item Removed", message);
+            return;
         }
     }
+
+    // If the item is not found
+    QString message = "Item not found: " + itemName;
+    QMessageBox::warning(nullptr, "Error", message);
 }
 
 void item::setname(string x)
