@@ -14,7 +14,7 @@ item::item(string n, double p, int d, string desc, bool a, int rp) {
     rentalPeriod = rp;
 }
 
-bool item::isavailable() const
+bool item::isavailable()
 {
     return stock > 0; // Available only if stock is greater than 0
 }
@@ -53,12 +53,12 @@ bool item::operator==(const item& other)  {
     return name == other.name && price == other.price && demand == other.demand;
 }
 
-QVector<item> *items;
+ QVector<item> *items;
 void removeitem(const item& x) {
-    auto it = Qlist.begin();
-    while (it != Qlist.end()) {
+    auto it = items->begin();
+    while (it != items->end()) {
         if (it->second == x) {
-            it = Qlist.erase(it);
+            it = items->erase(it);
         } else {
             ++it;
         }

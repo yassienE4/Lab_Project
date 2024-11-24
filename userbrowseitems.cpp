@@ -1,6 +1,6 @@
 #include "userbrowseitems.h"
 #include "ui_userbrowseitems.h"
-
+#include <QMessageBox>
 userbrowseitems::userbrowseitems(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::userbrowseitems)
@@ -41,7 +41,7 @@ void userbrowseitems::searchItems()
         }
 
         // Check if only available items are to be shown
-        if (showAvailableOnly && !i.isAvailable())
+        if (showAvailableOnly && !i.isavailable())
         {
             continue; // Skip this item if it's not available
         }
