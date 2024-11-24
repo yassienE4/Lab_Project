@@ -14,7 +14,9 @@ private:
     int itemsize;
     QVector<users> *normalUsers;
     QVector<admin> *adminUser;
-    QVector<pair<int,item>> *items;
+   //QVector<pair<int,item>> *items;
+    QVector<item> *items;
+
 public:
     centerflow();
     ~centerflow();

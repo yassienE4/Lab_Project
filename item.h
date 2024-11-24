@@ -7,6 +7,7 @@ class item
 private:
     string name;
     double price;
+    int stock;
     int demand;
     string description;
     bool available;

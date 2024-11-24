@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QVector>
 #include "item.h"
+#include "centerflow.h"
 
 namespace Ui {
 class userbrowseitems;
@@ -19,7 +20,8 @@ public:
 
 private:
     Ui::userbrowseitems *ui;
-    QVector<pair<int,item>> *items;
+    QVector<item> *items;
+    void searchItems();
 };
 
 #endif // USERBROWSEITEMS_H
