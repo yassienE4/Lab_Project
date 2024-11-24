@@ -59,8 +59,9 @@ void loginwindow::on_pushButton_Login_clicked()
 
                     this->hide();
 
-                    //adminmainpage *AMP = new adminmainpage();
+                    //adminmainpage *AMP = new adminmainpage(nullptr, &center);
                     //AMP->show();
+
                     return;
                 }
                 ++it;

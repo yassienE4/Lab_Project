@@ -10,7 +10,16 @@ int main(int argc, char *argv[])
     MainWindow w(nullptr, &x);
     w.show();
 
-    // filename objname(nullptr, &center);
+    //
+    // 1. NO STRINGS ONLY QSTRING
+    //
+    // 2.filename objname(nullptr, &center);
+    // 2.mainwindow w(nullptr)
+    // 2.w->show()
+    //
+    // 3. center.getvectoruser();
+
+
 
     return a.exec();
 }
