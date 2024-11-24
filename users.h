@@ -8,6 +8,8 @@ class users : public allaccounts
 public:
     users();
     void login();
+    vector<item> personalReservation;
+    vector<item> history;
 };
 
 
