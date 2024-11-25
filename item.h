@@ -36,7 +36,8 @@ public:
     double getprice();
     int getdemand();
     int getrentalperiod();
-    void setstock(int x); //
+    void setstock(int x);
+    void setrentalperiod(int x);
 };
 
 #endif // ITEM_H

@@ -15,6 +15,9 @@ public:
     explicit adminmanagerentals(QWidget *parent = nullptr);
     ~adminmanagerentals();
 
+private slots:
+    void on_listWidgetRentalRequest_itemDoubleClicked(QListWidgetItem *item);
+
 private:
     Ui::adminmanagerentals *ui;
 };

@@ -3,6 +3,7 @@
 #include <QMessageBox>
 #include "item.h"
 #include <string>
+#include <reserveitems.h>
 userbrowseitems::userbrowseitems(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::userbrowseitems)
@@ -78,26 +79,24 @@ void userbrowseitems::on_listWidget_results_itemDoubleClicked(QListWidgetItem *i
         // Extract the item name
         QString itemName = itemText.split(":").first().trimmed();
 
-        // Add the item to rental requests
-        addRentalRequest(itemName);
-    }
-}
-void userbrowseitems::addRentalRequest(const QString &itemName)
-{
-    for (auto item : *items) // Iterate through the vector to find the item
-    {
-        if (item.getname() == itemName)
+        for (auto item : *items) // Iterate through the vector to find the item
         {
-            // Add the item to rentalRequests instead of reserving it right away
-            rentalRequests->push_back(item);  // Add item to rentalRequests vector
+            if (item.getname() == itemName)
+            {
+                reserveitems *R= new reserveitems(this);
+                R->setItemDetails(item.getname(),item.getdescription(),item.getstock(),item.getprice(),item);
 
-            QString message = "'" + itemName + "' has been added to your rental requests.";
-            QMessageBox::information(this, "Item Added", message);
-            return; // Exit the function after adding the item to the rental requests
+                R->show();
+
+                // Hide the current window
+                this->hide();
+
+                // Return after finding and processing the item
+                return;
+            }
         }
-    }
 
-    // If the item is not found
-    QString message = "Item not found: " + itemName;
-    QMessageBox::warning(this, "Error", message);
+        // If the item is not found, show a warning
+        QMessageBox::warning(this, "Error", "Item not found.");
+    }
 }
