@@ -1,5 +1,7 @@
 #ifndef ADMINMANAGERENTALS_H
 #define ADMINMANAGERENTALS_H
+#include <QListWidgetItem>
+
 
 #include <QDialog>
 

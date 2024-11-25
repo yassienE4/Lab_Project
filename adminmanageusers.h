@@ -2,32 +2,31 @@
 #define ADMINMANAGEUSERS_H
 
 #include <QDialog>
-#include <QTableWidget>
-#include <QLineEdit>
-#include <QPushButton>
+#include <vector>
 #include "centerflow.h"
-#include "allaccounts.h"
 
-class AdminManageUsers :public QDialog {
+namespace Ui {
+class AdminManageUsers;
+}
+
+
+class AdminManageUsers : public QDialog
+{
     Q_OBJECT
 
 public:
-    explicit AdminManageUsers(QWidget *parent =nullptr, centerflow *center = nullptr);
-    ~AdminManageUsers();
+    explicit AdminManageUsers(QWidget *parent=nullptr, centerflow* center = nullptr);
+    ~AdminManageUsers() ;
 
 private slots:
-    void loadUserTable() ;
-    void addUser() ;
-    void editUser();
-    void deleteUser();
-    void searchUser();
+    void displayUsers() ;
+    void on_pushButton_LoadUsers_clicked();
+    void on_pushButton_DeleteUser_clicked();
+    void on_pushButton_Back_clicked();
 
 private:
-    QTableWidget *userTable;
-    QLineEdit *searchInput;
-    QLineEdit *usernameInput,*emailInput,*nameInput,*contactInput,*passwordInput;
-    QPushButton *addButton, *editButton, *deleteButton, *searchButton;
-    centerflow*center;
+    Ui::AdminManageUsers *ui;
+    centerflow *center;
 };
 
-#endif // ADMINMANAGEUSERS_H
+#endif
