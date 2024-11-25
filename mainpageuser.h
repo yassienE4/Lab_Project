@@ -2,6 +2,7 @@
 #define MAINPAGEUSER_H
 
 #include <QDialog>
+#include <centerflow.h>
 
 namespace Ui {
 class mainpageuser;
@@ -12,7 +13,7 @@ class mainpageuser : public QDialog
     Q_OBJECT
 
 public:
-    explicit mainpageuser(QWidget *parent = nullptr);
+    explicit mainpageuser(QWidget *parent = nullptr, centerflow *center = nullptr);
     ~mainpageuser();
 
 private slots:
@@ -28,6 +29,7 @@ private slots:
 
 private:
     Ui::mainpageuser *ui;
+    centerflow *center;
 };
 
 #endif // MAINPAGEUSER_H
