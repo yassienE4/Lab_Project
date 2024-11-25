@@ -29,7 +29,8 @@ private slots:
 
 private:
     Ui::userbrowseitems *ui;
-    vector<item> *items;
+    centerflow *center;
+
     vector<item> *rentalRequests;  // Vector to hold reserved items (rental requests)
 
     void searchItems();

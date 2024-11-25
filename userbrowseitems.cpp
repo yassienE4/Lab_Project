@@ -4,6 +4,7 @@
 #include "item.h"
 #include <string>
 #include <reserveitems.h>
+#include "centerflow.h"
 userbrowseitems::userbrowseitems(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::userbrowseitems)
@@ -28,7 +29,7 @@ void userbrowseitems::searchItems()
 
     // Iterate through the QVector of items and filter based on the search criteria
 
-    for (auto i : *items)
+    for (auto i :center->getitems())
     {
         // Check if the item matches the keyword (case insensitive search in name or description)
         if (!keyword.isEmpty() &&
@@ -79,7 +80,7 @@ void userbrowseitems::on_listWidget_results_itemDoubleClicked(QListWidgetItem *i
         // Extract the item name
         QString itemName = itemText.split(":").first().trimmed();
 
-        for (auto item : *items) // Iterate through the vector to find the item
+        for (auto item :center->getitems()) // Iterate through the vector to find the item
         {
             if (item.getname() == itemName)
             {

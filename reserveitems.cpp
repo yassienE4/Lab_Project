@@ -26,12 +26,12 @@ void reserveitems::setItemDetails(const QString &name, const QString &descriptio
 
 void reserveitems::addRentalRequest(const QString &itemName)
 {
-    for (auto item : *items) // Iterate through the vector to find the item
+    for (auto item : center->getitems()) // Iterate through the vector to find the item
     {
         if (item.getname() == itemName)
         {
             // Add the item to rentalRequests instead of reserving it right away
-            rentalRequests->push_back(item);  // Add item to rentalRequests vector
+            center->getrentalRequest().push_back(item);  // Add item to rentalRequests vector
 
             QString message = "'" + itemName + "' has been added to your rental requests.";
             QMessageBox::information(this, "Item Added", message);

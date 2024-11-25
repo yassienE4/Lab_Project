@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "item.h"
+#include "centerflow.h"
 
 namespace Ui {
 class reserveitems;
@@ -29,9 +30,7 @@ private slots:
 private:
     Ui::reserveitems *ui;
     item currentItem; //item being reserved
-   vector<item> *rentalRequests;  // Vector to hold reserved items (rental requests)
-    vector<item> *items;
-
+    centerflow *center;
 
 };
 
