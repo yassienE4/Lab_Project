@@ -17,7 +17,7 @@ class userbrowseitems : public QDialog
     Q_OBJECT
 
 public:
-    explicit userbrowseitems(QWidget *parent = nullptr, centerflow* center);
+    explicit userbrowseitems(QWidget *parent = nullptr, centerflow *center = nullptr);
     ~userbrowseitems();
 
 private slots:

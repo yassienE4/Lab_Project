@@ -2,9 +2,9 @@
 #include "ui_approvedeny.h"
 
 
-ApproveDeny::ApproveDeny(QWidget *parent)
+ApproveDeny::ApproveDeny(QWidget *parent, centerflow *center)
     : QDialog(parent)
-    , ui(new Ui::ApproveDeny)
+    , ui(new Ui::ApproveDeny), center(center)
 {
     ui->setupUi(this);
 }

@@ -3,9 +3,9 @@
 #include <QMessageBox>
 #include <centerflow.h>
 
-reserveitems::reserveitems(QWidget *parent)
+reserveitems::reserveitems(QWidget *parent,centerflow *center)
     : QDialog(parent)
-    , ui(new Ui::reserveitems)
+    , ui(new Ui::reserveitems), center(center)
 {
     ui->setupUi(this);
 }
