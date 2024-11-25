@@ -31,10 +31,7 @@ private:
     Ui::userbrowseitems *ui;
     centerflow *center;
 
-    vector<item> *rentalRequests;  // Vector to hold reserved items (rental requests)
-
     void searchItems();
-    //void reserveItem(const QString &itemName);
 };
 
 #endif // USERBROWSEITEMS_H

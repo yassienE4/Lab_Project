@@ -21,6 +21,9 @@ adminmanagerentals::~adminmanagerentals()
 
 void adminmanagerentals::on_tableWidget_itemDoubleClicked(QTableWidgetItem *item)
 {
+    this->hide();
+    ApproveDeny *ap= new ApproveDeny(this);
+    ap->show();
 
 }
 

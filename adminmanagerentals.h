@@ -2,6 +2,7 @@
 #define ADMINMANAGERENTALS_H
 #include <QListWidgetItem>
 #include "centerflow.h"
+#include "approvedeny.h"
 
 #include <QDialog>
 

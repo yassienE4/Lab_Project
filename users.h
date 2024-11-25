@@ -8,7 +8,7 @@ class users : public allaccounts
 public:
     users();
     void login();
-    vector<item> CurrentReservation;
+    vector<item> CurrentReservations;
     vector<item> history;
 };
 

@@ -1,6 +1,7 @@
 #ifndef USERVIEWRESERVATIONS_H
 #define USERVIEWRESERVATIONS_H
-
+#include "users.h"
+#include "centerflow.h"
 #include <QDialog>
 
 namespace Ui {
@@ -17,6 +18,8 @@ public:
 
 private:
     Ui::userviewreservations *ui;
+    void populateReservations(const std::vector<item> &confirmedrentals);
+    void loadConfirmedRentals(const std::vector<item> &confirmedrentals);
 };
 
 #endif // USERVIEWRESERVATIONS_H
