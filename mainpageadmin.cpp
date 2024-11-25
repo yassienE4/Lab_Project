@@ -4,9 +4,9 @@
 
 
 
-mainpageadmin::mainpageadmin(QWidget *parent)
+mainpageadmin::mainpageadmin(QWidget *parent, centerflow *center)
     : QDialog(parent)
-    , ui(new Ui::mainpageadmin)
+    , ui(new Ui::mainpageadmin), center(center)
 {
     ui->setupUi(this);
 }
@@ -32,7 +32,7 @@ void mainpageadmin::on_pushButton_user_clicked()
 {
 
     // Create the AdminManageUsers dialog and pass the necessary data (like centerflow)
-    AdminManageUsers* manageUsersPage = new AdminManageUsers(nullptr, center);
+    adminmanageusers* manageUsersPage = new adminmanageusers(nullptr, &center);
 
     // Show the dialog
     manageUsersPage->show();

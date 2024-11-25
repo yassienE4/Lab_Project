@@ -8,20 +8,19 @@ using namespace std;
 
 //>>>>>>> Stashed changes
 
-AdminManageUsers::AdminManageUsers(QWidget *parent, centerflow* center) :
+adminmanageusers::adminmanageusers(QWidget *parent, centerflow* center) :
     QDialog(parent),
-    ui(new Ui::AdminManageUsers) ,
-    center (center)
+    ui(new Ui::adminmanageusers) , center(center)
 {
-    ui-> setupUi (this);
+    ui->setupUi(this);
 }
 
-AdminManageUsers::~AdminManageUsers()
+adminmanageusers::~adminmanageusers()
 {
     delete ui ;
 }
 
-void AdminManageUsers::populateTable(const vector<users>& userslist) {
+void adminmanageusers::populateTable(const vector<users>& userslist) {
     QTableWidget* table = ui->userTable;
     table->setRowCount(center->getvectoruser().size());
 
@@ -37,12 +36,12 @@ void AdminManageUsers::populateTable(const vector<users>& userslist) {
     }
 }
 
-void AdminManageUsers::on_pushButton_LoadUsers_clicked()
+void adminmanageusers::on_pushButton_LoadUsers_clicked()
 {
     displayUsers() ;
 }
 
-void AdminManageUsers::on_pushButton_DeleteUser_clicked()
+void adminmanageusers::on_pushButton_DeleteUser_clicked()
 {
     QListWidgetItem*selectedItem=ui->listWidget_Users->currentItem();
 
@@ -74,7 +73,7 @@ void AdminManageUsers::on_pushButton_DeleteUser_clicked()
     }
 }
 
-void AdminManageUsers::on_pushButton_Back_clicked()
+void adminmanageusers::on_pushButton_Back_clicked()
 {
     this->hide() ;
     // Return to admin main page or previous window

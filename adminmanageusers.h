@@ -7,17 +7,17 @@
 #include "users.h"
 
 namespace Ui {
-class AdminManageUsers;
+class adminmanageusers;
 }
 
 
-class AdminManageUsers : public QDialog
+class adminmanageusers : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit AdminManageUsers(QWidget *parent=nullptr, centerflow* center = nullptr);
-    ~AdminManageUsers() ;
+    explicit adminmanageusers(QWidget *parent=nullptr, centerflow* center = nullptr);
+    ~adminmanageusers() ;
 
 
 private slots:
@@ -27,7 +27,7 @@ private slots:
     void on_pushButton_Back_clicked();
 
 private:
-    Ui::AdminManageUsers *ui;
+    Ui::adminmanageusers *ui;
     centerflow *center;
     void populateTable(const vector<users>& users);
 };
