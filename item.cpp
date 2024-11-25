@@ -26,7 +26,7 @@ item::item(QString n, double p, int d, QString desc, bool a, int rp, int w) {
     stock = w;
 }
 
-bool item::isavailable()
+bool item::isavailable() const
 {
     return stock > 0; // Available only if stock is greater than 0
 }
@@ -92,7 +92,7 @@ void item::setname(QString x)
 {
     name = x;
 }
-QString item::getname()
+QString item::getname() const
 {
     return name;
 }
@@ -105,11 +105,11 @@ void item::setdemand(int x)
     demand = x;
 }
 
-QString item::getdescription()
+QString item::getdescription() const
 {
     return description;
 }
-double item::getprice()
+double item::getprice() const
 {
     return price;
 }
@@ -117,7 +117,7 @@ int item::getdemand()
 {
     return demand;
 }
-int item::getrentalperiod()
+int item::getrentalperiod() const
 {
     return rentalPeriod;
 }
@@ -126,7 +126,7 @@ void item::setrentalperiod(int x)
     rentalPeriod = x;
 }
 
-int item::getstock()
+int item::getstock() const
 {
     return stock;
 }

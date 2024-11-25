@@ -3,8 +3,6 @@
 #include <QMessageBox>
 #include <QListWidgetItem>
 
-
-
 AdminManageUsers::AdminManageUsers(QWidget *parent, centerflow* center) :
     QDialog(parent),
     ui(new Ui::AdminManageUsers) ,
