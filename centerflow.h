@@ -24,6 +24,7 @@ public:
     void pushadmin(admin x);
     void pushrequest(item x);
     void eraserequest(); // needs paramter
+    void pushitem(item x);
     vector<users> getvectoruser();
     vector<admin> getadminvector();
     vector<item> getrentalRequest();

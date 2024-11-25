@@ -16,8 +16,8 @@
   <widget class="QPushButton" name="pushButton_Clear">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>400</y>
+     <x>390</x>
+     <y>390</y>
      <width>71</width>
      <height>21</height>
     </rect>
@@ -26,292 +26,198 @@
     <string>clear</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_description">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>100</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_name">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>30</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_price">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>70</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_name">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
-     <y>30</y>
-     <width>58</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Item name:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_price">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
-     <y>70</y>
-     <width>91</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Item price:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_description">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
-     <y>100</y>
-     <width>81</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Item description:</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_stock">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>180</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_availability">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>140</y>
-     <width>113</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_stock">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>190</y>
-     <width>58</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Item stock:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_availability">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>140</y>
-     <width>81</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Item availbility:</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_period">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>230</y>
-     <width>113</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_period">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
-     <y>230</y>
-     <width>111</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>item rental period:</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_period">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>230</y>
-     <width>101</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Update rental period: </string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_stock">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>190</y>
-     <width>101</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>update stock:</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_availability">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>140</y>
-     <width>101</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Update availability:</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_description">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>100</y>
-     <width>101</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Update description:</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_price">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>70</y>
-     <width>101</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Update price demand:</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_name">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
      <x>290</x>
      <y>30</y>
-     <width>101</width>
-     <height>21</height>
+     <width>97</width>
+     <height>241</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Update Name:</string>
-   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButton_name">
+      <property name="text">
+       <string>Update Name:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_price">
+      <property name="text">
+       <string>Update price demand:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_description">
+      <property name="text">
+       <string>Update description:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_availability">
+      <property name="text">
+       <string>Update availability:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_stock">
+      <property name="text">
+       <string>update stock:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_period">
+      <property name="text">
+       <string>Update rental period: </string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
-  <widget class="QPushButton" name="pushButton_left">
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>30</y>
+     <width>131</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QLineEdit" name="lineEdit_name">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_price">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_description"/>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_availability"/>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_stock"/>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_period"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>30</y>
+     <width>76</width>
+     <height>221</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QLabel" name="label_name">
+      <property name="text">
+       <string>Item name:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_price">
+      <property name="text">
+       <string>Item price:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_description">
+      <property name="text">
+       <string>Item description:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_availability">
+      <property name="text">
+       <string>Item availbility:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_stock">
+      <property name="text">
+       <string>Item stock:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_period">
+      <property name="text">
+       <string>item rental period:</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>320</y>
-     <width>100</width>
-     <height>32</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>goleft</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_right">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>320</y>
-     <width>100</width>
-     <height>32</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>goright</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_index">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
      <y>300</y>
-     <width>101</width>
-     <height>16</height>
+     <width>441</width>
+     <height>81</height>
     </rect>
    </property>
-   <property name="text">
-    <string>vector index (i)</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_delete">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>340</y>
-     <width>111</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>delete from vector</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_add">
-   <property name="geometry">
-    <rect>
-     <x>359</x>
-     <y>300</y>
-     <width>111</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>add to vector</string>
-   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" colspan="2">
+     <widget class="QLabel" name="label_index">
+      <property name="text">
+       <string>vector index (i)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2" rowspan="2">
+     <widget class="QPushButton" name="pushButton_add">
+      <property name="text">
+       <string>add to vector</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" rowspan="2">
+     <widget class="QPushButton" name="pushButton_left">
+      <property name="text">
+       <string>goleft</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1" rowspan="2">
+     <widget class="QPushButton" name="pushButton_right">
+      <property name="text">
+       <string>goright</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="pushButton_delete">
+      <property name="text">
+       <string>delete from vector</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

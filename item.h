@@ -15,7 +15,7 @@ private:
     int rentalPeriod;
 public:
     item();
-    item(QString name, double price, int demand, QString description = "", bool available = true, int rentalPeriod = 0, int w = 0); //
+    item(QString name, double price, int demand, QString description = "", bool available = true, int rentalPeriod = 0, int stock = 0); //
     bool isavailable() const;
     void updateprice(double Update);
     void updatepricedemand(double m);
@@ -23,6 +23,7 @@ public:
     void updatedescription(const QString& Nd);
     void updaterental(int ur);
     void updateavailability(bool Av);
+    void updatestock(int s);
     void printItem();
     void removeItem(vector<item> &items, const QString &itemName);
     bool operator==(const item& other);

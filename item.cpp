@@ -1,7 +1,6 @@
 #include "item.h"
 #include <iostream>
-#include <Qstring>
-#include <vector>
+#include <QString>
 using namespace std;
 
 // Constructor
@@ -16,14 +15,14 @@ item::item()
     rentalPeriod = 0;
     stock = 0;
 }
-item::item(QString n, double p, int d, QString desc, bool a, int rp, int w) {
+item::item(QString n, double p, int d, QString desc, bool a, int rp, int s) {
     name = n;
     price = p;
     demand = d;
     description = desc;
     available = a;
     rentalPeriod = rp;
-    stock = w;
+    stock = s;
 }
 
 bool item::isavailable() const
@@ -53,6 +52,10 @@ void item::updaterental(int newRentalPeriod) {
 
 void item::updateavailability(bool isAvailable) {
     available = isAvailable;
+}
+
+void item::updatestock(int newstock) {
+    this->stock = newstock;
 }
 
 void item::printItem() {
