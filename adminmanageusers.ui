@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1201</width>
+    <width>897</width>
     <height>609</height>
    </rect>
   </property>
@@ -48,56 +48,7 @@
     </property>
    </column>
   </widget>
-  <widget class="QListWidget" name="listWidget_Users">
-   <property name="geometry">
-    <rect>
-     <x>880</x>
-     <y>180</y>
-     <width>256</width>
-     <height>192</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_LoadUsers">
-   <property name="geometry">
-    <rect>
-     <x>730</x>
-     <y>90</y>
-     <width>93</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Load Users</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_DeleteUser">
-   <property name="geometry">
-    <rect>
-     <x>730</x>
-     <y>130</y>
-     <width>93</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Delete User</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_3">
-   <property name="geometry">
-    <rect>
-     <x>730</x>
-     <y>180</y>
-     <width>93</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Back</string>
-   </property>
-  </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -140,24 +91,24 @@
   <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>740</x>
-     <y>286</y>
-     <width>95</width>
-     <height>131</height>
+     <x>770</x>
+     <y>110</y>
+     <width>77</width>
+     <height>151</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QPushButton" name="saveButton">
+     <widget class="QPushButton" name="pushButton_LoadUsers">
       <property name="text">
-       <string>Save</string>
+       <string>Load Users</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="cancelButton">
+     <widget class="QPushButton" name="pushButton_3">
       <property name="text">
-       <string>Cancel</string>
+       <string>Back</string>
       </property>
      </widget>
     </item>

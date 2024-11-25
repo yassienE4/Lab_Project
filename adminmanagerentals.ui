@@ -6,22 +6,42 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>1086</width>
+    <height>759</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QListWidget" name="listWidgetRentalRequest">
+  <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>60</y>
-     <width>256</width>
+     <x>230</x>
+     <y>210</y>
+     <width>411</width>
      <height>192</height>
     </rect>
    </property>
+   <column>
+    <property name="text">
+     <string>Name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Stock</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Price</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Rental Period</string>
+    </property>
+   </column>
   </widget>
  </widget>
  <resources/>

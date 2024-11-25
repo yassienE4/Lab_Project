@@ -1,7 +1,7 @@
 #ifndef ADMINMANAGERENTALS_H
 #define ADMINMANAGERENTALS_H
 #include <QListWidgetItem>
-
+#include "centerflow.h"
 
 #include <QDialog>
 
@@ -18,10 +18,12 @@ public:
     ~adminmanagerentals();
 
 private slots:
-    void on_listWidgetRentalRequest_itemDoubleClicked(QListWidgetItem *item);
+
 
 private:
     Ui::adminmanagerentals *ui;
+    centerflow *center;
+
 };
 
 #endif // ADMINMANAGERENTALS_H

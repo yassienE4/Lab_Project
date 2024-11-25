@@ -13,14 +13,14 @@ adminmanagerentals::~adminmanagerentals()
     delete ui;
 }
 
-void adminmanagerentals::on_listWidgetRentalRequest_itemDoubleClicked(QListWidgetItem *item)
-{
-    this->hide();
-
-
-
-}
-
 //in the new ui .cpp .h
 //in the new ui you have two buttons
 //accept= stock -1
+
+
+
+void adminmanagerentals::on_tableWidget_itemDoubleClicked(QTableWidgetItem *item)
+{
+
+}
+

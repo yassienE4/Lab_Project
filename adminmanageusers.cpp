@@ -2,6 +2,11 @@
 #include "ui_adminmanageusers.h"
 #include <QMessageBox>
 #include <QListWidgetItem>
+<<<<<<< Updated upstream
+=======
+using namespace std;
+
+>>>>>>> Stashed changes
 
 AdminManageUsers::AdminManageUsers(QWidget *parent, centerflow* center) :
     QDialog(parent),
@@ -16,13 +21,19 @@ AdminManageUsers::~AdminManageUsers()
     delete ui ;
 }
 
-void AdminManageUsers::displayUsers()
-{
-    ui->listWidget_Users-> clear() ;
-    for(const users& user:center->getvectoruser())
-    {
-        QString userInf =user.getname()+ " - " + user.getemail() ;
-        ui->listWidget_Users->addItem(userInf) ;
+void AdminManageUsers::populateTable(const vector<users>& users) {
+    QTableWidget* table = ui->userTable;
+    table->setRowCount(center->getvectoruser().size());
+
+    // Populate table with user data
+    for (int row = 0; row < center->getvectoruser().size(); ++row) {
+        const users& users = users[row];
+
+        table->setItem(row, 0, new QTableWidgetItem(users.getemail));
+        table->setItem(row, 1, new QTableWidgetItem(users.getname));
+        table->setItem(row, 2, new QTableWidgetItem(users.getusername));
+        table->setItem(row, 3, new QTableWidgetItem(users.getcontactInfo));
+        table->setItem(row, 4, new QTableWidgetItem(users.getpassword));
     }
 }
 
@@ -45,8 +56,8 @@ void AdminManageUsers::on_pushButton_DeleteUser_clicked()
     QString username=selectedUserInfo.split(" - ").first();// Extract username
 
     // Search for the user in the vector and remove
-    std::vector<users>& usersVector = center->getvectoruser();
-    auto it = std::remove_if(usersVector.begin(), usersVector.end(),
+    vector<users>& usersVector = center->getvectoruser();
+    auto it = remove_if(usersVector.begin(), usersVector.end(),
                              [username](const users& user) {
                                  return user.getname() == username;
                              });

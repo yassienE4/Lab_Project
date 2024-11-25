@@ -14,6 +14,7 @@ SOURCES += \
     adminmanagerentals.cpp \
     adminmanageusers.cpp \
     allaccounts.cpp \
+    approveordeny.cpp \
     centerflow.cpp \
     item.cpp \
     loginwindow.cpp \
@@ -34,6 +35,7 @@ HEADERS += \
     adminmanagerentals.h \
     adminmanageusers.h \
     allaccounts.h \
+    approveordeny.h \
     centerflow.h \
     item.h \
     loginwindow.h \

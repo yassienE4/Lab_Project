@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <vector>
 #include "centerflow.h"
+#include "users"
 
 namespace Ui {
 class AdminManageUsers;
@@ -18,6 +19,7 @@ public:
     explicit AdminManageUsers(QWidget *parent=nullptr, centerflow* center = nullptr);
     ~AdminManageUsers() ;
 
+
 private slots:
     void displayUsers() ;
     void on_pushButton_LoadUsers_clicked();
@@ -27,6 +29,7 @@ private slots:
 private:
     Ui::AdminManageUsers *ui;
     centerflow *center;
+    void populateTable(const vector<users>& users);
 };
 
 #endif
