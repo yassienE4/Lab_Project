@@ -1,6 +1,6 @@
 #include "item.h"
 #include <iostream>
-#include <string>
+#include <Qstring>
 #include <vector>
 using namespace std;
 

@@ -6,7 +6,6 @@ adminmanageitems::adminmanageitems(QWidget *parent, centerflow *center)
     , ui(new Ui::adminmanageitems), center(center)
 {
     ui->setupUi(this);
-    int index = 0;
 }
 
 adminmanageitems::~adminmanageitems()
@@ -16,8 +15,14 @@ adminmanageitems::~adminmanageitems()
 
 void adminmanageitems::on_pushButton_Clear_clicked()
 {
-    ui->label_availability->setText("");
-    //for all labels
+    ui->lineEdit_name->clear();
+    ui->lineEdit_availability->clear();
+    ui->lineEdit_price->clear();
+    ui->lineEdit_description->clear();
+    ui->lineEdit_period->clear();
+    ui->lineEdit_rental->clear();
+    ui->lineEdit_stock->clear();
+
 }
 
 //go left,go right
@@ -31,7 +36,28 @@ void adminmanageitems::on_pushButton_Clear_clicked()
 void adminmanageitems::on_pushButton_name_clicked()
 {
     QString temp = ui->lineEdit_name->text();
-    center->getitems()[0].updatename(temp); // instead of 0 index
+    center->getitems()[index].updatename(temp); // instead of 0 index
     ui->label_name->setText(temp);
 }
+
+
+
+void adminmanageitems::on_pushButton_left_clicked()
+{
+    if (index > 0) {
+        //ui->name->settext(item[index].name)
+        index--;
+        //function to update ui?
+    } else {
+        QMessageBox::warning(this, "Error", "Already at the first item.");
+    }
+}
+
+
+void adminmanageitems::on_pushButton_right_clicked()
+{
+    //ui->name->settext(item[index].name)
+    index++;
+}
+
 

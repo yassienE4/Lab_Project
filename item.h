@@ -1,6 +1,5 @@
 #ifndef ITEM_H
 #define ITEM_H
-#include <string>
 #include <QMessageBox>
 #include <QString>
 using namespace std;

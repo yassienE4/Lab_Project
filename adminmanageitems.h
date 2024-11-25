@@ -22,9 +22,16 @@ private slots:
 
     void on_pushButton_name_clicked();
 
+    void on_pushButton_8_clicked();
+
+    void on_pushButton_left_clicked();
+
+    void on_pushButton_right_clicked();
+
 private:
     Ui::adminmanageitems *ui;
     centerflow *center;
+    int index = 0;
 };
 
 #endif // ADMINMANAGEITEMS_H
