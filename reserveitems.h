@@ -14,7 +14,7 @@ class reserveitems : public QDialog
     Q_OBJECT
 
 public:
-    explicit reserveitems(QWidget *parent = nullptr);
+    explicit reserveitems(QWidget *parent = nullptr, centerflow* center);
 
     void setItemDetails(const QString &name, const QString &description, int stock, double price, const item &item);
     void addRentalRequest(const QString &itemName);

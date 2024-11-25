@@ -15,7 +15,7 @@ class adminmanagerentals : public QDialog
     Q_OBJECT
 
 public:
-    explicit adminmanagerentals(QWidget *parent = nullptr);
+    explicit adminmanagerentals(QWidget *parent = nullptr, centerflow* center);
     ~adminmanagerentals();
 
 private slots:

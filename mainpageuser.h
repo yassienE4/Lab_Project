@@ -30,6 +30,7 @@ private slots:
 private:
     Ui::mainpageuser *ui;
     centerflow *center;
+    QWidget *p;
 };
 
 #endif // MAINPAGEUSER_H
