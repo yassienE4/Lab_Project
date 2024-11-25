@@ -1,5 +1,7 @@
 #ifndef ADMINMANAGERENTALS_H
 #define ADMINMANAGERENTALS_H
+#include <QListWidgetItem>
+
 
 #include <QDialog>
 
@@ -14,6 +16,9 @@ class adminmanagerentals : public QDialog
 public:
     explicit adminmanagerentals(QWidget *parent = nullptr);
     ~adminmanagerentals();
+
+private slots:
+    void on_listWidgetRentalRequest_itemDoubleClicked(QListWidgetItem *item);
 
 private:
     Ui::adminmanagerentals *ui;

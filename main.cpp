@@ -18,7 +18,8 @@ int main(int argc, char *argv[])
     // 2.w->show()
     //
     // 3. center.getvectoruser();
-    if(clicked button left)
+
+ /*   if(clicked button left)
         i--
     if(clicked right)
         i++
@@ -29,4 +30,5 @@ int main(int argc, char *argv[])
 
 
     return a.exec();
+*/
 }

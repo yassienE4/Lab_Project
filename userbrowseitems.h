@@ -34,7 +34,6 @@ private:
 
     void searchItems();
     //void reserveItem(const QString &itemName);
-    void addRentalRequest(const QString &itemName);
 };
 
 #endif // USERBROWSEITEMS_H

@@ -121,6 +121,11 @@ int item::getrentalperiod()
 {
     return rentalPeriod;
 }
+void item::setrentalperiod(int x)
+{
+    rentalPeriod = x;
+}
+
 int item::getstock()
 {
     return stock;
