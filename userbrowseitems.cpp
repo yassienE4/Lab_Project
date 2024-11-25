@@ -5,9 +5,9 @@
 #include <string>
 #include <reserveitems.h>
 #include "centerflow.h"
-userbrowseitems::userbrowseitems(QWidget *parent)
+userbrowseitems::userbrowseitems(QWidget *parent,centerflow *center)
     : QDialog(parent)
-    , ui(new Ui::userbrowseitems)
+    , ui(new Ui::userbrowseitems) , center(center)
 {
     ui->setupUi(this);
 }

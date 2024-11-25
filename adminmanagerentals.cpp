@@ -1,9 +1,9 @@
 #include "adminmanagerentals.h"
 #include "ui_adminmanagerentals.h"
 
-adminmanagerentals::adminmanagerentals(QWidget *parent)
+adminmanagerentals::adminmanagerentals(QWidget *parent, centerflow *center)
     : QDialog(parent)
-    , ui(new Ui::adminmanagerentals)
+    , ui(new Ui::adminmanagerentals), center(center)
 {
     ui->setupUi(this);
 }
