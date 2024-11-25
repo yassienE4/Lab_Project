@@ -168,3 +168,9 @@ vector<item> &centerflow::getitems()
 {
     return items;
 }
+vector<item> centerflow::getconfirmedrentals()
+{
+    return confirmedrentals();
+
+}
+

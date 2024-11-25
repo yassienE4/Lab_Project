@@ -17,6 +17,7 @@ private:
    //QVector<pair<int,item>> *items;
     vector<item> items;
     vector<item> rentalRequests;
+    vector<item> confirmedrentals;
 public:
     centerflow();
     ~centerflow();
@@ -29,6 +30,7 @@ public:
     vector<admin> getadminvector();
     vector<item> getrentalRequest();
     vector<item> &getitems();
+    vector<item> getconfirmedrentals();
 };
 
 #endif // CENTERFLOW_H
