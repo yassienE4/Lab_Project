@@ -147,7 +147,7 @@ vector<users>& centerflow::getvectoruser() {
     return normalUsers;  // Ensure normalUsers is not a temporary object
 }
 
-vector<admin> centerflow::getadminvector()
+vector<admin>& centerflow::getadminvector()
 {
     return adminUser;
 }
@@ -159,7 +159,7 @@ void centerflow::eraserequest()
 {
     //rentalRequests.erase();
 }
-vector<item> centerflow::getrentalRequest()
+vector<item>& centerflow::getrentalRequest()
 {
     return rentalRequests;
 }
@@ -168,9 +168,9 @@ vector<item> &centerflow::getitems()
 {
     return items;
 }
-vector<item> centerflow::getconfirmedrentals()
+vector<item>& centerflow::getconfirmedrentals()
 {
-    return confirmedrentals();
+    return confirmedrentals;
 
 }
 

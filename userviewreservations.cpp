@@ -22,6 +22,6 @@ void userviewreservations::populateReservations(const vector<item> &confirmedren
     ui->tableWidgetReservations->clear();
 
     for (const auto &rental : confirmedrentals) {
-        ui->tableWidgetReservations->addItem(QString::fromStdString(confirmedrentals.toString()));
+       // ui->tableWidgetReservations->addItem(QString::fromStdString(confirmedrentals.toString()));
     }
 }

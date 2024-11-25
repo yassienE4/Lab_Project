@@ -2,11 +2,11 @@
 #include "ui_adminmanageusers.h"
 #include <QMessageBox>
 #include <QListWidgetItem>
-<<<<<<< Updated upstream
-=======
+//<<<<<<< Updated upstream
+//=======
 using namespace std;
 
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
 
 AdminManageUsers::AdminManageUsers(QWidget *parent, centerflow* center) :
     QDialog(parent),
@@ -21,19 +21,19 @@ AdminManageUsers::~AdminManageUsers()
     delete ui ;
 }
 
-void AdminManageUsers::populateTable(const vector<users>& users) {
+void AdminManageUsers::populateTable(const vector<users>& userslist) {
     QTableWidget* table = ui->userTable;
     table->setRowCount(center->getvectoruser().size());
 
     // Populate table with user data
     for (int row = 0; row < center->getvectoruser().size(); ++row) {
-        const users& users = users[row];
+        const users& users = userslist[row];
 
-        table->setItem(row, 0, new QTableWidgetItem(users.getemail));
-        table->setItem(row, 1, new QTableWidgetItem(users.getname));
-        table->setItem(row, 2, new QTableWidgetItem(users.getusername));
-        table->setItem(row, 3, new QTableWidgetItem(users.getcontactInfo));
-        table->setItem(row, 4, new QTableWidgetItem(users.getpassword));
+        table->setItem(row, 0, new QTableWidgetItem(userslist.getemail));
+        table->setItem(row, 1, new QTableWidgetItem(userslist.getname));
+        table->setItem(row, 2, new QTableWidgetItem(userslist.getusername));
+        table->setItem(row, 3, new QTableWidgetItem(userslist.getcontactInfo));
+        table->setItem(row, 4, new QTableWidgetItem(userslist.getpassword));
     }
 }
 

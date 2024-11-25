@@ -4,7 +4,7 @@
 #include <QDialog>
 #include <vector>
 #include "centerflow.h"
-#include "users"
+#include "users.h"
 
 namespace Ui {
 class AdminManageUsers;
