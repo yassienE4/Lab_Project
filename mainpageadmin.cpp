@@ -32,7 +32,7 @@ void mainpageadmin::on_pushButton_user_clicked()
 {
 
     // Create the AdminManageUsers dialog and pass the necessary data (like centerflow)
-    adminmanageusers* manageUsersPage = new adminmanageusers(nullptr, &center);
+    adminmanageusers* manageUsersPage = new adminmanageusers(nullptr, center);
 
     // Show the dialog
     manageUsersPage->show();
