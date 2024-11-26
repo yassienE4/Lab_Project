@@ -12,6 +12,7 @@ SOURCES += \
     admin.cpp \
     adminmanageitems.cpp \
     adminmanagerentals.cpp \
+    adminmanageuser.cpp \
     allaccounts.cpp \
     approvedeny.cpp \
     centerflow.cpp \
@@ -32,6 +33,7 @@ HEADERS += \
     admin.h \
     adminmanageitems.h \
     adminmanagerentals.h \
+    adminmanageuser.h \
     allaccounts.h \
     approvedeny.h \
     centerflow.h \
@@ -50,6 +52,7 @@ HEADERS += \
 FORMS += \
     adminmanageitems.ui \
     adminmanagerentals.ui \
+    adminmanageuser.ui \
     approvedeny.ui \
     loginwindow.ui \
     mainpageadmin.ui \
