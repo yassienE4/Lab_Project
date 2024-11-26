@@ -7,7 +7,7 @@
 
 mainpageuser::mainpageuser(QWidget *parent, centerflow *center)
     : QDialog(parent)
-    , ui(new Ui::mainpageuser), center(center)
+    , ui(new Ui::mainpageuser), p(parent),center(center)
 {
     ui->setupUi(this);
 }
@@ -19,7 +19,7 @@ mainpageuser::~mainpageuser()
 
 void mainpageuser::on_pushButton_Browse_clicked()
 {
-    userbrowseitems browse = new userbrowseitems(&parent, &center);
+    userbrowseitems browse = new userbrowseitems(&p, &center);
 }
 
 

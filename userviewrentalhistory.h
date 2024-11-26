@@ -12,7 +12,7 @@ class userviewrentalhistory : public QDialog
     Q_OBJECT
 
 public:
-    explicit userviewrentalhistory(QWidget *parent = nullptr);
+    explicit userviewrentalhistory(QWidget *parent = nullptr, centerflow* center);
     ~userviewrentalhistory();
 
 private:

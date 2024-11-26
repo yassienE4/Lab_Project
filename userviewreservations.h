@@ -13,7 +13,7 @@ class userviewreservations : public QDialog
     Q_OBJECT
 
 public:
-    explicit userviewreservations(QWidget *parent = nullptr);
+    explicit userviewreservations(QWidget *parent = nullptr, centerflow* center);
     ~userviewreservations();
 
 private:
