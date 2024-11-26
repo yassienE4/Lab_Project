@@ -87,7 +87,7 @@ void loginwindow::on_pushButton_Clear_clicked()
 void loginwindow::on_pushButton_Back_clicked()
 {
     this->hide();
-    MainWindow *m = new MainWindow(nullptr, center);
+    MainWindow *m = new MainWindow;
     m->show();
 }
 

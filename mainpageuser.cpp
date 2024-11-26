@@ -44,7 +44,7 @@ void mainpageuser::on_pushButton_History_clicked()
 void mainpageuser::on_pushButton_Back_clicked()
 {
     this->hide();
-    MainWindow *m = new MainWindow(nullptr, center);
+    MainWindow *m = new MainWindow;
     m->show();
 }
 

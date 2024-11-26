@@ -1,11 +1,9 @@
 #include "centerflow.h"
-#include "mainwindow.h"
 #include "allaccounts.h"
 #include <QList>
 #include <fstream>
 #include "users.h"
 #include "admin.h"
-#include <Qpair>
 #include "item.h"
 #include <QString>
 

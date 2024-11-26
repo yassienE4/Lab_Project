@@ -17,7 +17,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr, centerflow *center = nullptr);
+    MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
@@ -27,6 +27,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    centerflow *center;
+    centerflow *center = new centerflow();
 };
 #endif // MAINWINDOW_H
