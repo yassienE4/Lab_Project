@@ -1,6 +1,6 @@
 #include "adminmanagerentals.h"
 #include "ui_adminmanagerentals.h"
-#include "approvedeny.h" // For handling approve/deny dialog
+#include "approvedeny.h"
 
 adminmanagerentals::adminmanagerentals(QWidget *parent, centerflow *center)
     : QDialog(parent)
@@ -40,11 +40,6 @@ void adminmanagerentals::on_pushButton_left_clicked()
     }
 }
 
-
-
-
-
-
 void adminmanagerentals::on_pushButton_right_clicked()
 {
     if (index < static_cast<int>(center->getitems().size()) - 1) {
@@ -70,7 +65,7 @@ void adminmanagerentals::on_pushButton_openApproveDeny_clicked()
     }
 
     // Open the ApproveDeny dialog
-    ApproveDeny approveDenyDialog(this, center, nullptr); // Replace nullptr with the appropriate user object if available
+    ApproveDeny approveDenyDialog(this, center, nullptr);
     approveDenyDialog.setRentalDetails(currentRental);
     approveDenyDialog.exec();
 
