@@ -20,6 +20,11 @@ userbrowseitems::~userbrowseitems()
 
 void userbrowseitems::searchItems()
 {
+    if(center->getitems().empty())
+    {
+        ui->listWidget_results->addItem("No items match your search criteria.");
+        return;
+    }
     QString keyword = ui->lineEditKeyWord->text();
     double minPrice = ui->MinPriceSpinBox->value();
     double maxPrice = ui->MaxPriceSpinBox->value();
