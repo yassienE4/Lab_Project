@@ -34,6 +34,8 @@ public:
     vector<item> getconfirmedrentals();
 
     bool getuserwithname(QString username,QString password);
+
+    void applydemand(item &x);
 };
 
 #endif // CENTERFLOW_H
