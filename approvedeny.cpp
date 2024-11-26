@@ -36,3 +36,13 @@ void ApproveDeny::on_pushButtonApprove_clicked()
         this->hide();
     }
 }
+
+void ApproveDeny::on_pushButtonDeny_clicked()
+{
+    if (currentRental) //checks to see its not null to avoid mistakes
+    {
+        QMessageBox::information(this, "Deny", "Rental Denied for item: " + currentRental->getname());
+
+    }
+}
+
