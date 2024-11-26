@@ -19,6 +19,7 @@ public:
 
 private slots:
     void on_pushButtonApprove_clicked();
+    void on_pushButtonDeny_clicked();
 
 private:
     Ui::ApproveDeny *ui;
