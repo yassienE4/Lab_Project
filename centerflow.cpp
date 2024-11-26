@@ -13,7 +13,7 @@ centerflow::centerflow()
 {
     QString p = "1";
     users x(p,p,p,p,p);
-    normalUsers.push_back(x);
+    normalUsers.push_back(&x);
     fstream myfile;
     myfile.open(":/files/accountfile.txt",ios::in);
     if(myfile.is_open())
@@ -31,7 +31,7 @@ centerflow::centerflow()
             getline(myfile,n);
             x = x.fromStdString(n);
             t.setpassword(x);
-            normalUsers.push_back(t);
+            normalUsers.push_back(&t);
         }
         myfile.close();
     }
@@ -55,7 +55,7 @@ centerflow::centerflow()
             getline(myfile,n);
             x = x.fromStdString(n);
             t.setpassword(x);
-            adminUser.push_back(t);
+            adminUser.push_back(&t);
         }
         myfile.close();
     }
@@ -81,7 +81,7 @@ centerflow::centerflow()
             t.setdemand(stoi(a));
             getline(myfile,a);
             t.setstock(stoi(a));
-            items.push_back(t);
+            items.push_back(&t);
         }
         myfile.close();
     }
@@ -98,8 +98,8 @@ centerflow::~centerflow()
         myfile<<to_string(size) + "\n";
         for (int i = 0; i < size; i++)
         {
-            myfile << normalUsers[i].getname().toStdString() + "\n";
-            myfile << normalUsers[i].getpassword().toStdString() + "\n";
+            myfile << normalUsers[i]->getname().toStdString() + "\n";
+            myfile << normalUsers[i]->getpassword().toStdString() + "\n";
         }
         myfile.close();
     }
@@ -111,8 +111,8 @@ centerflow::~centerflow()
         myfile<<to_string(adminsize) + "\n";
         for (int i = 0; i < adminsize; i++)
         {
-            myfile << adminUser[i].getname().toStdString() + "\n";
-            myfile << adminUser[i].getpassword().toStdString() + "\n";
+            myfile << adminUser[i]->getname().toStdString() + "\n";
+            myfile << adminUser[i]->getpassword().toStdString() + "\n";
         }
         myfile.close();
     }
@@ -123,10 +123,10 @@ centerflow::~centerflow()
         myfile<<to_string(itemsize) + "\n";
         for (int i = 0; i < itemsize; i++)
         {
-            myfile << items[i].getname().toStdString() + "\n";
-            myfile<< to_string(items[i].getprice()) + "\n";
-            myfile<< to_string(items[i].getdemand()) + "\n";
-            myfile<< to_string(items[i].getstock()) + "\n";
+            myfile << items[i]->getname().toStdString() + "\n";
+            myfile<< to_string(items[i]->getprice()) + "\n";
+            myfile<< to_string(items[i]->getdemand()) + "\n";
+            myfile<< to_string(items[i]->getstock()) + "\n";
         }
         myfile.close();
     }
@@ -135,23 +135,23 @@ centerflow::~centerflow()
 
 void centerflow::pushuser(users x)
 {
-    normalUsers.push_back(x);
+    normalUsers.push_back(&x);
 }
 void centerflow::pushadmin(admin x)
 {
-    adminUser.push_back(x);
+    adminUser.push_back(&x);
 }
 void centerflow::pushitem(item x)
 {
-    items.push_back(x);
+    items.push_back(&x);
 }
 
-vector<users> centerflow::getvectoruser() {
+vector<users*> centerflow::getvectoruser() {
     qDebug() << "called2";
     return normalUsers;  // Ensure normalUsers is not a temporary object
 }
 
-vector<admin> centerflow::getadminvector()
+vector<admin*> centerflow::getadminvector()
 {
     return adminUser;
 }
@@ -168,7 +168,7 @@ vector<item> centerflow::getrentalRequest()
     return rentalRequests;
 }
 
-vector<item> &centerflow::getitems()
+vector<item*> centerflow::getitems()
 {
     return items;
 }

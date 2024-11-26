@@ -79,8 +79,10 @@ void userbrowseitems::on_listWidget_results_itemDoubleClicked(QListWidgetItem *i
         // Extract the item name
         QString itemName = itemText.split(":").first().trimmed();
 
-        for (const auto &item : center->getitems()) // Iterate through the vector to find the item
+        for (auto * item : center->getitems()) // Iterate through the vector to find the item
         {
+            if(item)
+
             if (item.getname() == itemName)
             {
                 reserveitems *R= new reserveitems(nullptr, center);
