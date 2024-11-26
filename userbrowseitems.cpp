@@ -29,8 +29,7 @@ void userbrowseitems::searchItems()
 
     // Iterate through the QVector of items and filter based on the search criteria
 
-    for (auto i :center->getitems())
-    {
+    for (const auto &i : center->getitems()) {
         // Check if the item matches the keyword (case insensitive search in name or description)
         if (!keyword.isEmpty() &&
             !i.getname().contains(keyword, Qt::CaseInsensitive) &&
@@ -80,7 +79,7 @@ void userbrowseitems::on_listWidget_results_itemDoubleClicked(QListWidgetItem *i
         // Extract the item name
         QString itemName = itemText.split(":").first().trimmed();
 
-        for (auto item :center->getitems()) // Iterate through the vector to find the item
+        for (const auto &item : center->getitems()) // Iterate through the vector to find the item
         {
             if (item.getname() == itemName)
             {

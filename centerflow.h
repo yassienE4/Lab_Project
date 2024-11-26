@@ -12,8 +12,7 @@ private:
     int size;
     int adminsize;
     int itemsize;
-    vector<users> normalUsers;
-    vector<admin> adminUser;
+
    //QVector<pair<int,item>> *items;
     vector<item> items;
     vector<item> rentalRequests;
@@ -21,6 +20,8 @@ private:
 public:
     centerflow();
     ~centerflow();
+    vector<users> normalUsers;
+    vector<admin> adminUser;
     void pushuser(users x);
     void pushadmin(admin x);
     void pushrequest(item x);
@@ -31,6 +32,8 @@ public:
     vector<item> getrentalRequest();
     vector<item> &getitems();
     vector<item> getconfirmedrentals();
+
+    bool getuserwithname(QString username,QString password);
 };
 
 #endif // CENTERFLOW_H

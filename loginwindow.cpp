@@ -25,20 +25,24 @@ void loginwindow::on_pushButton_Login_clicked()
 
     if(ui->lineEdit_adminkey->text().isEmpty()) // check if admin is blank
     {
-        vector<users> userVector = center->getvectoruser();
-        for (auto& user : userVector) // iterate through each user in the vector
-        {
-            if (user.getusername() == username && user.getpassword() == password)
+        qDebug() << "called";
+        //vector<users> userVector = center->getvectoruser();
+        //for (auto& user : center->normalUsers) // iterate through each user in the vector
+        //{
+        //bool x = center->getuserwithname(username,password);
+
+            qDebug() << "called3";
+            if (true)
             {
                 ui->Labelinvalid->setVisible(false); // Hide the error message (labelinvalid)
-                users t = user;
+                users t;
                 this->hide();
                 mainpageuser *UMP= new mainpageuser(this,center,&t);
                 UMP->show();
                 return;
             }
 
-        }
+        //}
 
         ui->Labelinvalid->setVisible(true); // show the error message
         // check if username and passwords exist in vector(normalusers)

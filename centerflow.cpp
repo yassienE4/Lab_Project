@@ -144,6 +144,7 @@ void centerflow::pushitem(item x)
 }
 
 vector<users> centerflow::getvectoruser() {
+    qDebug() << "called2";
     return normalUsers;  // Ensure normalUsers is not a temporary object
 }
 
@@ -172,5 +173,17 @@ vector<item> centerflow::getconfirmedrentals()
 {
     return confirmedrentals;
 
+}
+
+bool centerflow::getuserwithname(QString username, QString password)
+{
+    for(auto item : normalUsers)
+    {
+        if(item.getusername() == username && item.getpassword() == password)
+        {
+            return true;
+        }
+    }
+    return false;
 }
 

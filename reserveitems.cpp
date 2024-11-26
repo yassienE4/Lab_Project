@@ -26,7 +26,7 @@ void reserveitems::setItemDetails(const QString &name, const QString &descriptio
 
 void reserveitems::addRentalRequest(const QString &itemName)
 {
-    for (auto item : center->getitems()) // Iterate through the vector to find the item
+    for (const auto &item : center->getitems()) // Iterate through the vector to find the item
     {
         if (item.getname() == itemName)
         {
