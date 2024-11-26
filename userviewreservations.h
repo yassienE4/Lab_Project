@@ -18,8 +18,7 @@ public:
 
 private:
     Ui::userviewreservations *ui;
-    void populateReservations(const std::vector<item> &confirmedrentals);
-    void loadConfirmedRentals(const std::vector<item> &confirmedrentals);
+    void populateList();
     centerflow* center;
 };
 

@@ -13,39 +13,15 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QTableWidget" name="tableWidgetReservations">
+  <widget class="QListWidget" name="listWidgetReservations">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>40</y>
-     <width>331</width>
+     <x>130</x>
+     <y>60</y>
+     <width>256</width>
      <height>192</height>
     </rect>
    </property>
-   <property name="maximumSize">
-    <size>
-     <width>331</width>
-     <height>16777215</height>
-    </size>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-   <column>
-    <property name="text">
-     <string>Item Name</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Price</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Rental Period (in days)</string>
-    </property>
-   </column>
   </widget>
  </widget>
  <resources/>
