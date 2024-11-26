@@ -29,8 +29,6 @@ void ApproveDeny::on_pushButtonApprove_clicked()
         {
             QMessageBox::information(this, "Approval", "Rental approved for item: " + currentRental->getname());
             int newStock = currentRental->getstock() - 1; // Get current stock and subtract 1
-            if(newStock <3)
-                center->applydemand(*currentRental);
             currentRental->setstock(newStock);
             center->getconfirmedrentals().push_back(*currentRental);
             user->CurrentReservations.push_back(*currentRental);

@@ -183,8 +183,3 @@ bool centerflow::getuserwithname(QString username, QString password)
     qDebug() << "called4";
 }
 
-void centerflow::applydemand(item &x)
-{
-    x.setprice((x.getprice()*2));
-}
-
