@@ -1,8 +1,8 @@
 #include "loginwindow.h"
 #include "ui_loginwindow.h"
 #include "mainwindow.h"
-//#include "usermainpage.h"
-//#include "adminmainpage.h"
+#include "mainpageuser.h"
+#include "mainpageadmin.h"
 #include <QDebug>
 #include "users.h"
 
@@ -31,11 +31,11 @@ void loginwindow::on_pushButton_Login_clicked()
             if ((it->getusername() == username) && (it->getpassword() == password))
             {
                 ui->Labelinvalid->setVisible(false); // Hide the error message (labelinvalid)
-
+                users t = *it;
                 this->hide();
 
-                //usermainpage *UMP= new usermainpage();
-                //UMP->show();
+                mainpageuser *UMP= new mainpageuser(this,center,&t);
+                UMP->show();
                 return;
             }
             ++it;
@@ -59,8 +59,8 @@ void loginwindow::on_pushButton_Login_clicked()
 
                     this->hide();
 
-                    //adminmainpage *AMP = new adminmainpage(nullptr, &center);
-                    //AMP->show();
+                    mainpageadmin *AMP = new mainpageadmin(this, center);
+                    AMP->show();
 
                     return;
                 }

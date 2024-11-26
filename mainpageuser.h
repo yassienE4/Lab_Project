@@ -13,7 +13,7 @@ class mainpageuser : public QDialog
     Q_OBJECT
 
 public:
-    explicit mainpageuser(QWidget *parent = nullptr, centerflow *center = nullptr);
+    explicit mainpageuser(QWidget *parent = nullptr, centerflow *center = nullptr,users *user = nullptr);
     ~mainpageuser();
 
 private slots:
@@ -29,8 +29,9 @@ private slots:
 
 private:
     Ui::mainpageuser *ui;
-    centerflow *center;
+    users *user;
     QWidget *p;
+    centerflow*center;
 };
 
 #endif // MAINPAGEUSER_H

@@ -5,9 +5,9 @@
 #include "userviewrentalhistory.h"
 #include "mainwindow.h"
 
-mainpageuser::mainpageuser(QWidget *parent, centerflow *center)
+mainpageuser::mainpageuser(QWidget *parent, centerflow * center,users *user)
     : QDialog(parent)
-    , ui(new Ui::mainpageuser), center(center)
+    , ui(new Ui::mainpageuser), center(center), user(user)
 {
     ui->setupUi(this);
 }
