@@ -12,16 +12,16 @@ userviewreservations::~userviewreservations()
 {
     delete ui;
 }
-void userviewreservations::loadConfirmedRentals(const vector<item> &confirmedrentals)
+void userviewreservations::populateList()
 {
-    populateReservations(confirmedrentals);
-}
+    ui->listWidgetReservations->clear(); // Clear any existing items
 
-void userviewreservations::populateReservations(const vector<item> &confirmedrentals)
-{
-    ui->tableWidgetReservations->clear();
+    // Iterate through the confirmed rentals vector and add each item to the QListWidget
+    for (const auto &rental : center->getconfirmedrentals())
+    {
+        QString itemText = (rental.getname()) + ": price: " +QString::number(rental.getprice(), 'f', 2) + " USD, rental period: " +
+                           QString::number(rental.getrentalperiod()) + " days";
 
-    for (const auto &rental : confirmedrentals) {
-       // ui->tableWidgetReservations->addItem(QString::fromStdString(confirmedrentals.toString()));
+        ui->listWidgetReservations->addItem(itemText); // Add the formatted text to the QListWidget
     }
 }
