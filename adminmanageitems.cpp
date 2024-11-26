@@ -93,13 +93,29 @@ void adminmanageitems::on_pushButton_period_clicked()
 
 void adminmanageitems::on_pushButton_add_clicked()
 {
-
+    QString name = ui->lineEdit_name->text();
+    double price = ui->lineEdit_price->text().toDouble();
+    QString description = ui->lineEdit_description->text();
+    bool available = ui->lineEdit_availability->text().toLower() == "available";
+    int stock = ui->lineEdit_stock->text().toInt();
+    int rentalPeriod = ui->lineEdit_period->text().toInt();
+    item newItem(name, price, description, available, rentalPeriod, stock);
+    center->getitems().push_back(newItem);
+    QMessageBox::information(this, "Item Added", "The item has been added successfully.");
+    updateItemUI();
 }
 
 
 void adminmanageitems::on_pushButton_delete_clicked()
 {
+    if (QMessageBox::question(this, "Delete Item", "Are you sure you want to delete this item?") == QMessageBox::Yes) {
 
+        center->getitems().erase(center->getitems().begin() + index);
+        if (index >= static_cast<int>(center->getitems().size())) {
+            index = static_cast<int>(center->getitems().size()) - 1;
+        }
+        updateItemUI();
+    }
 }
 
 void adminmanageitems::updateItemUI()
