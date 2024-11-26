@@ -22,7 +22,7 @@ adminmanagerentals::~adminmanagerentals()
 void adminmanagerentals::on_tableWidget_itemDoubleClicked(QTableWidgetItem *item)
 {
     this->hide();
-    ApproveDeny *ap= new ApproveDeny(this);
+    ApproveDeny *ap= new ApproveDeny(nullptr, center);
     ap->show();
 
 }

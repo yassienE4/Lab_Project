@@ -3,7 +3,7 @@
 #include <QMessageBox>
 #include <centerflow.h>
 
-reserveitems::reserveitems(QWidget *parent,centerflow *center)
+reserveitems::reserveitems(QWidget *parent,centerflow *center, users)
     : QDialog(parent)
     , ui(new Ui::reserveitems), center(center)
 {
