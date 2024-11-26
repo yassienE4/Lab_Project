@@ -2,9 +2,9 @@
 #include "ui_approvedeny.h"
 
 
-ApproveDeny::ApproveDeny(QWidget *parent, centerflow *center)
+ApproveDeny::ApproveDeny(QWidget *parent, centerflow *center, users *user)
     : QDialog(parent)
-    , ui(new Ui::ApproveDeny), center(center)
+    , ui(new Ui::ApproveDeny), center(center), user(user)
 {
     ui->setupUi(this);
 }
@@ -31,8 +31,7 @@ void ApproveDeny::on_pushButtonApprove_clicked()
             int newStock = currentRental->getstock() - 1; // Get current stock and subtract 1
             currentRental->setstock(newStock);
             center->getconfirmedrentals().push_back(*currentRental);
-
-            CurrentReservations->push_back(currentRental);
+            user->CurrentReservations.push_back(*currentRental);
         }
         this->hide();
     }
