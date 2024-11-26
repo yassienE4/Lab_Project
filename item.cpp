@@ -15,10 +15,9 @@ item::item()
     rentalPeriod = 0;
     stock = 0;
 }
-item::item(QString n, double p, int d, QString desc, bool a, int rp, int s) {
+item::item(QString n, double p, QString desc, bool a, int rp, int s) {
     name = n;
     price = p;
-    demand = d;
     description = desc;
     available = a;
     rentalPeriod = rp;
