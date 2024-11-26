@@ -3,7 +3,7 @@
 #include "item.h"
 #include "centerflow.h"
 #include <QDialog>
-
+#include "users.h"
 namespace Ui {
 class ApproveDeny;
 }
@@ -24,6 +24,8 @@ private:
     Ui::ApproveDeny *ui;
     item *currentRental;
     centerflow *center;
+    users *user;
+
 
 };
 
