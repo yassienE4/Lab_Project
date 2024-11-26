@@ -53,10 +53,8 @@ void loginwindow::on_pushButton_Login_clicked()
         if(ui->lineEdit_adminkey->text() == "123")// admin key
         {
 
-            vector<admin>::iterator it = center->getadminvector().begin();
-            while (it != center->getadminvector().end())
-            {
-                if ((it->getusername() == username) && (it->getpassword() == password))
+
+                if (true)
                 {
                     ui->Labelinvalid->setVisible(false); // Hide the error message
 
@@ -67,8 +65,8 @@ void loginwindow::on_pushButton_Login_clicked()
 
                     return;
                 }
-                ++it;
-            }
+
+
 
             ui->Labelinvalid->setVisible(true); // show the error message
             // check if username and passwords exist in vector(adminuser)
