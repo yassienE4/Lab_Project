@@ -31,6 +31,7 @@ void ApproveDeny::on_pushButtonApprove_clicked()
             int newStock = currentRental->getstock() - 1; // Get current stock and subtract 1
             currentRental->setstock(newStock);
             center->getconfirmedrentals().push_back(*currentRental);
+
             CurrentReservations->push_back(currentRental);
         }
         this->hide();
