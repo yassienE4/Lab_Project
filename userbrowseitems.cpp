@@ -32,26 +32,26 @@ void userbrowseitems::searchItems()
     for (const auto &i : center->getitems()) {
         // Check if the item matches the keyword (case insensitive search in name or description)
         if (!keyword.isEmpty() &&
-            !i.getname().contains(keyword, Qt::CaseInsensitive) &&
-            !i.getdescription().contains(keyword, Qt::CaseInsensitive))
+            !i->getname().contains(keyword, Qt::CaseInsensitive) &&
+            !i->getdescription().contains(keyword, Qt::CaseInsensitive))
         {
             continue; // Skip this item if it does not match the keyword
         }
 
         // Check if the item price is within the specified price range
-        if (i.getprice() < minPrice || i.getprice() > maxPrice)
+        if (i->getprice() < minPrice || i->getprice() > maxPrice)
         {
             continue; // Skip this item if it does not match the price range
         }
 
         // Check if only available items are to be shown
-        if (showAvailableOnly && !i.isavailable())
+        if (showAvailableOnly && !i->isavailable())
         {
             continue; // Skip this item if it's not available
         }
 
        // create a string to display in the next step
-        QString itemText = i.getname() + ": " + QString::number(i.getprice()) + " USD [" + QString::number(i.getstock()) + " in stock]";
+        QString itemText = i->getname() + ": " + QString::number(i->getprice()) + " USD [" + QString::number(i->getstock()) + " in stock]";
 
 
         ui->listWidget_results->addItem(itemText); // Add the item to the QListWidget
@@ -83,10 +83,10 @@ void userbrowseitems::on_listWidget_results_itemDoubleClicked(QListWidgetItem *i
         {
             if(item)
 
-            if (item.getname() == itemName)
+            if (item->getname() == itemName)
             {
                 reserveitems *R= new reserveitems(nullptr, center);
-                R->setItemDetails(item.getname(),item.getdescription(),item.getstock(),item.getprice(),item);
+                R->setItemDetails(item->getname(), item->getdescription(), item->getstock(), item->getprice(), *item);
 
                 R->show();
 

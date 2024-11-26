@@ -49,28 +49,28 @@ void adminmanageitems::on_pushButton_right_clicked()
 void adminmanageitems::on_pushButton_name_clicked()
 {
     QString temp = ui->lineEdit_name->text();
-    center->getitems()[index].updatename(temp);
+    center->getitems()[index]->updatename(temp);
     ui->label_name->setText(temp);
 }
 
 void adminmanageitems::on_pushButton_price_clicked()
 {
     QString temp = ui->lineEdit_price->text();
-    center->getitems()[index].updateprice(temp.toDouble());
+    center->getitems()[index]->updateprice(temp.toDouble());
     ui->label_price->setText(temp);
 }
 
 void adminmanageitems::on_pushButton_description_clicked()
 {
     QString temp = ui->lineEdit_description->text();
-    center->getitems()[index].updatedescription(temp);
+    center->getitems()[index]->updatedescription(temp);
     ui->label_description->setText(temp);
 }
 
 void adminmanageitems::on_pushButton_availability_clicked()
 {
     bool available = ui->lineEdit_availability->text().toLower() == "available";
-    center->getitems()[index].updateavailability(available);
+    center->getitems()[index]->updateavailability(available);
     ui->label_availability->setText(available ? "Available" : "Unavailable");
 }
 
@@ -78,7 +78,7 @@ void adminmanageitems::on_pushButton_availability_clicked()
 void adminmanageitems::on_pushButton_stock_clicked()
 {
     QString temp = ui->lineEdit_stock->text();
-    center->getitems()[index].updatestock(temp.toInt());
+    center->getitems()[index]->updatestock(temp.toInt());
     ui->label_stock->setText(temp);
 }
 
@@ -86,7 +86,7 @@ void adminmanageitems::on_pushButton_stock_clicked()
 void adminmanageitems::on_pushButton_period_clicked()
 {
     QString temp = ui->lineEdit_period->text();
-    center->getitems()[index].updaterental(temp.toInt());
+    center->getitems()[index]->updaterental(temp.toInt());
     ui->label_period->setText(temp);
 }
 
@@ -100,7 +100,7 @@ void adminmanageitems::on_pushButton_add_clicked()
     int stock = ui->lineEdit_stock->text().toInt();
     int rentalPeriod = ui->lineEdit_period->text().toInt();
     item newItem(name, price, description, available, rentalPeriod, stock);
-    center->getitems().push_back(newItem);
+    center->getitems().push_back(&newItem);
     QMessageBox::information(this, "Item Added", "The item has been added successfully.");
     updateItemUI();
 }
@@ -120,7 +120,7 @@ void adminmanageitems::on_pushButton_delete_clicked()
 
 void adminmanageitems::updateItemUI()
 {
-    const item &currentItem = center->getitems()[index];
+    const item &currentItem = *(center->getitems()[index]);
     ui->lineEdit_name->setText(currentItem.getname());
     ui->lineEdit_price->setText(QString::number(currentItem.getprice()));
     ui->lineEdit_description->setText(currentItem.getdescription());

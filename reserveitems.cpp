@@ -31,7 +31,7 @@ void reserveitems::addRentalRequest(const QString &itemName)
         if (item->getname() == itemName)
         {
             // Add the item to rentalRequests instead of reserving it right away
-            center->getrentalRequest().push_back(&item);  // Add item to rentalRequests vector
+            center->getrentalRequest().push_back(*item);  // Add item to rentalRequests vector
 
             QString message = "'" + itemName + "' has been added to your rental requests.";
             QMessageBox::information(this, "Item Added", message);
