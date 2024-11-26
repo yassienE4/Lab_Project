@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>pushButton_Back</class>
- <widget class="QDialog" name="pushButton_Back">
+ <widget class="QDialog" name="adminmanageusers">
   <property name="geometry">
    <rect>
     <x>0</x>
