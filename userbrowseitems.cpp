@@ -84,7 +84,7 @@ void userbrowseitems::on_listWidget_results_itemDoubleClicked(QListWidgetItem *i
         {
             if (item.getname() == itemName)
             {
-                reserveitems *R= new reserveitems(this);
+                reserveitems *R= new reserveitems(nullptr, center);
                 R->setItemDetails(item.getname(),item.getdescription(),item.getstock(),item.getprice(),item);
 
                 R->show();
