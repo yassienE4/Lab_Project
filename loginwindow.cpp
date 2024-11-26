@@ -25,7 +25,8 @@ void loginwindow::on_pushButton_Login_clicked()
 
     if(ui->lineEdit_adminkey->text().isEmpty()) // check if admin is blank
     {
-        vector<users>::iterator it = center->getvectoruser().begin(); //creates an iterator and places it at begining of vector
+        vector<users> userVector = center->getvectoruser();
+        vector<users>::iterator it = userVector.begin(); //creates an iterator and places it at begining of vector
         while (it != center->getvectoruser().end()) //transverses vector until username and password is found or vector is fully transversed
         {
             if ((it->getusername() == username) && (it->getpassword() == password))

@@ -26,11 +26,11 @@ public:
     void pushrequest(item x);
     void eraserequest(); // needs paramter
     void pushitem(item x);
-    vector<users> &getvectoruser();
-    vector<admin> &getadminvector();
-    vector<item> &getrentalRequest();
+    vector<users> getvectoruser();
+    vector<admin> getadminvector();
+    vector<item> getrentalRequest();
     vector<item> &getitems();
-    vector<item> &getconfirmedrentals();
+    vector<item> getconfirmedrentals();
 };
 
 #endif // CENTERFLOW_H
