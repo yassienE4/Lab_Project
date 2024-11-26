@@ -1,9 +1,9 @@
 #include "userviewreservations.h"
 #include "ui_userviewreservations.h"
 
-userviewreservations::userviewreservations(QWidget *parent)
+userviewreservations::userviewreservations(QWidget *parent, centerflow* center)
     : QDialog(parent)
-    , ui(new Ui::userviewreservations)
+    , ui(new Ui::userviewreservations), center(center)
 {
     ui->setupUi(this);
 }
