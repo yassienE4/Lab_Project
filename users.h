@@ -7,6 +7,7 @@ class users : public allaccounts
 {
 public:
     users();
+    users(QString x, QString y, QString z, QString w, QString v);
     void login();
     vector<item> CurrentReservations;
     vector<item> history;

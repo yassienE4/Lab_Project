@@ -5,7 +5,7 @@
 using namespace std;
 class allaccounts
 {
-private:
+protected:
         QString email;
         QString name;
         QString username;

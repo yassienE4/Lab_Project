@@ -10,6 +10,8 @@ mainpageuser::mainpageuser(QWidget *parent, centerflow * center,users *user)
     , ui(new Ui::mainpageuser), center(center), user(user)
 {
     ui->setupUi(this);
+    QString n = user->getusername();
+    ui->label_welcome->setText("Welcome " + n);
 }
 
 mainpageuser::~mainpageuser()

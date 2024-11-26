@@ -5,6 +5,7 @@ class admin : public allaccounts
 {
 public:
     admin();
+    admin(QString x, QString y, QString z, QString w, QString v);
     void login();
 };
 

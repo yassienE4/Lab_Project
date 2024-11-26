@@ -11,6 +11,7 @@ mainpageadmin::mainpageadmin(QWidget *parent, centerflow *center)
     , ui(new Ui::mainpageadmin), center(center)
 {
     ui->setupUi(this);
+    ui->label_welcome->setText("Welcome admin");
 }
 
 mainpageadmin::~mainpageadmin()

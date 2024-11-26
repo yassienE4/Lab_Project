@@ -11,6 +11,9 @@
 
 centerflow::centerflow()
 {
+    QString p = "1";
+    users x(p,p,p,p,p);
+    normalUsers.push_back(x);
     fstream myfile;
     myfile.open(":/files/accountfile.txt",ios::in);
     if(myfile.is_open())
@@ -177,13 +180,6 @@ vector<item> centerflow::getconfirmedrentals()
 
 bool centerflow::getuserwithname(QString username, QString password)
 {
-    for(auto item : normalUsers)
-    {
-        if(item.getusername() == username && item.getpassword() == password)
-        {
-            return true;
-        }
-    }
-    return false;
+    qDebug() << "called4";
 }
 
