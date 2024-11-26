@@ -1,6 +1,7 @@
 #include "adminmanagerentals.h"
 #include "ui_adminmanagerentals.h"
 
+
 adminmanagerentals::adminmanagerentals(QWidget *parent, centerflow *center)
     : QDialog(parent)
     , ui(new Ui::adminmanagerentals), center(center)
@@ -19,11 +20,12 @@ adminmanagerentals::~adminmanagerentals()
 
 
 
-void adminmanagerentals::on_tableWidget_itemDoubleClicked(QTableWidgetItem *item)
+void adminmanagerentals::on_tableWidget_itemDoubleClicked(QListWidgetItem *item)
 {
     this->hide();
     ApproveDeny *ap= new ApproveDeny(nullptr, center);
     ap->show();
 
 }
+
 

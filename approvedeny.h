@@ -13,7 +13,7 @@ class ApproveDeny : public QDialog
     Q_OBJECT
 
 public:
-    explicit ApproveDeny(QWidget *parent = nullptr, centerflow *center = nullptr);
+    explicit ApproveDeny(QWidget *parent = nullptr, centerflow *center = nullptr, users* user=nullptr);
     ~ApproveDeny();
     void setRentalDetails(item *rental);
 

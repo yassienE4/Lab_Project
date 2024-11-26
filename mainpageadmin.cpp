@@ -1,6 +1,6 @@
 #include "mainpageadmin.h"
 #include "ui_mainpageadmin.h"
-#include "adminmanageusers.h"
+
 #include "adminmanagerentals.h"
 #include "adminmanageitems.h"
 #include "mainwindow.h"
@@ -39,10 +39,10 @@ void mainpageadmin::on_pushButton_user_clicked()
 {
 
     // Create the AdminManageUsers dialog and pass the necessary data (like centerflow)
-    adminmanageusers* manageUsersPage = new adminmanageusers(this, center);
-    this->hide();
+    //adminmanageusers* manageUsersPage = new adminmanageusers(this, center);
+    //this->hide();
     // Show the dialog
-    manageUsersPage->show();
+    //manageUsersPage->show();
 }
 
 

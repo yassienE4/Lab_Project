@@ -21,6 +21,8 @@ public:
 private slots:
 
 
+    void on_tableWidget_itemDoubleClicked(QListWidgetItem *item);
+
 private:
     Ui::adminmanagerentals *ui;
     centerflow *center;

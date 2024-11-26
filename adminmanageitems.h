@@ -18,11 +18,7 @@ public:
 private slots:
     void on_pushButton_Clear_clicked();
 
-    void on_pushButton_5_clicked();
-
     void on_pushButton_name_clicked();
-
-    void on_pushButton_8_clicked();
 
     void on_pushButton_left_clicked();
 
@@ -32,7 +28,7 @@ private slots:
 
     void on_pushButton_description_clicked();
 
-    void on_pushButton_rental_clicked();
+    //void on_pushButton_rental_clicked();
 
     void on_pushButton_availability_clicked();
 
